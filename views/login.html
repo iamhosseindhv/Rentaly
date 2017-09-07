@@ -1,0 +1,141 @@
+
+<script type='text/javascript' src='/javascripts/login.js'></script>
+
+<div class="base-layer">
+     <div class="login-wrapper">
+          <button class="close-btn">
+               <svg viewBox="0 0 24 24" aria-label="Close">
+                    <path fill-rule="evenodd" d="M23.25 24a.744.744 0 0 1-.53-.22L12 13.062 1.28 23.782a.75.75 0 0 1-1.06-1.06L10.94 12 .22 1.28A.75.75 0 1 1 1.28.22L12 10.94 22.72.22a.749.749 0 1 1 1.06 1.06L13.062 12l10.72 10.72a.749.749 0 0 1-.53 1.28"></path>
+               </svg>
+          </button>
+          <h2>Sign up</h2>
+          <div class="grid">
+               <form id="my-form" method="POST" action="/authenticate">
+                    <div>
+                         <input name="email" class="input-field" type="email" id="email" aria-describedby="emailHelp" placeholder="Email Address">
+                         <div id="email-errors"></div>
+                    </div>
+                    <div>
+                         <input name="password" class="input-field" type="password" id="password" placeholder="Password">
+                         <div id="password-errors"></div>
+                    </div>
+                    <div>
+                         <input name="passwordMatch" class="input-field" type="password" id="passwordMatch" placeholder="Re-enter Password">
+                         <div id="passwordMatch-errors"></div>
+                    </div>
+                    <button type="submit" class="submit-btn">Sign up</button>
+                    <div id="errors"></div>
+                    <div class="line-separator"></div>
+                    <div class="msg login-msg">
+                         <p>Already have an account? <span>Login</span></p>
+                    </div>
+                    <div class="msg signup-msg">
+                         <p>Don't have an account? <span>Sign up</span></p>
+                    </div>
+               </form>
+          </div>
+     </div>
+</div>
+
+<style>
+
+     .base-layer {
+          position: fixed;
+          width: 100%;
+          height: 100%;
+          z-index: 3;
+          background-color: rgba(0, 0, 0, 0.7);
+          display: none;
+          justify-content: center;
+          align-items: center;
+     }
+     .login-wrapper {
+          font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+          background-color: #fff;
+          box-sizing: border-box;
+          margin: auto;
+          max-width: 518px !important;
+          width: 100% !important;
+          position: relative !important;
+          padding: 32px;
+     }
+     .close-btn, .submit-btn {
+          border: none;
+          background-color: transparent;
+          outline: none;
+          cursor: pointer;
+     }
+     .close-btn {
+          margin-bottom: 14px;
+     }
+     .close-btn svg {
+          display: block;
+          fill: rgb(118, 118, 118);
+          height: 16px;
+          width: 16px;
+     }
+     #my-form {
+          width:100%;
+     }
+     .input-field:focus {
+          border: solid 1px #707070;
+     }
+     .input-field {
+          box-sizing : border-box;
+          border-radius: 3px;
+          width: 100%;
+          padding: 12px !important;
+          margin-top: 15px;
+          border: solid 1px #dcdcdc;
+          transition: border 0.3s;
+          line-height: 25px;
+          font-size: 16px;
+          outline: none;
+     }
+     .input-field::placeholder {
+          color: rgb(118, 118, 118);
+     }
+     #email-errors, #password-errors, #passwordMatch-errors {
+          margin-top: 5px;
+          color: #ff4d4d;
+     }
+     .submit-btn {
+          background-color: #fd5c63;
+          padding: 12px !important;
+          margin-top: 15px;
+          border-radius: 3px;
+          width: 100%;
+          line-height: 25px;
+          font-size: 18px;
+     }
+     .line-separator {
+          margin:auto;
+          width:90%;
+          height:1px;
+          margin-top: 40px;
+          border-bottom:1px solid #dcdcdc;
+     }
+     .msg {
+          margin-top: 10px;
+          text-align: center;
+     }
+     .msg span {
+          color: #fd5c63;
+          font-weight: bold;
+          cursor: pointer;
+     }
+     .signup-msg {
+          display: none;
+     }
+     @media (max-width: 743px){
+          .login-wrapper {
+               max-width: none !important;
+               position: fixed !important;
+               left: 0 !important;
+               right: 0 !important;
+               top: 0 !important;
+               bottom: 0 !important;
+               overflow-y: auto !important;
+          }
+     }
+</style>

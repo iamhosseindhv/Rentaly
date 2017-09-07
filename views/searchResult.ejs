@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--vazir font-->
+    <link type="text/css" rel="stylesheet" href="https://cdn.rawgit.com/rastikerdar/vazir-font/v4.4.1/dist/font-face.css" />
+
+    <link rel='stylesheet' href='/stylesheets/searchResult.css'/>
+    <script type='text/javascript' src='/javascripts/searchMap/searchMapHandler-bundle.js'></script>
+    <script type='text/javascript' src='/javascripts/searchMap/searchMap.js'></script>
+    <script type='text/javascript' src='/javascripts/searchResult-bundle.js'></script>
+
+    <!--date picker stuff-->
+    <script type='text/javascript' src='/javascripts/kamadatepicker.min.js'></script>
+    <link rel='stylesheet' href='/stylesheets/kamadatepicker.min.css'/>
+
+    <!--google maps api-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!--mdl for footer-->
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">-->
+    <!--google material design components-->
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+
+</head>
+<body>
+    <% include login.html %>
+
+
+
+    <div class="head">
+        <div class="grid" style="direction: rtl">
+            <div class="barWrapper-1" style="background-color: red">
+                <input id="autocomplete" placeholder="Enter your address" type="text" value="<%= location %>">
+            </div>
+            <div class="barWrapper-2"  style="background-color: blue">
+                <span class="">
+                    <input readonly type=text id="to-date">
+                </span>
+                <span class="">
+                    <input readonly type=text id="from-date">
+                </span>
+                <span>
+                    <button onclick="myModule.searchDates()">Search</button>
+                </span>
+            </div>
+            <div class="barWrapper-3"  style="background-color: green">
+                <select id="guestPicker">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                </select>
+            </div>
+            <div class="barWrapper-4">
+                <ul>
+                    <li class="head-li">
+                        <% if (isAuthenticated) { %>
+                        <span class="head-item" id="logout-btn">Logout</span>
+                        <% } else { %>
+                        <span class="head-item" id="login-signin-btn">Login / Sign Up</span>
+                        <% } %>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div id="content-wrap">
+        <div class="toggle-results-map">Map</div>
+
+        <!--fetch results here-->
+        <div id="main-wrap">
+            <div class="overlay"></div>
+            <div id="main" class="grid">
+                <% listings.forEach(function(record){ %>
+                <div id="<%= record.id %>" class="cell result-cell">
+                    <a href=<%= "../../rooms/" + record.id + "?" + "queryString consisted of city, " +
+                        "checkin-out date, no of guests, no of adults and children"%>>
+                        <div class="box">
+                            <div class="margin-free">
+                                <div class="cell-thumbnail">
+                                    <!--<img class="text" src= < %= record.thumbnail_img % >>-->
+                                    <img class="margin-free" src="/images/owl.jpg">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cell-info">
+                            <div class="cell-info--row">
+                                <span class="cell-info--price"><%= record.price %></span>
+                                <span class="cell-info--title"><%= record.title %></span>
+                            </div>
+                            <div class="cell-info--row">
+                                <span class="cell-info--type"><%= record.type %></span>
+                                <span class="cell-info--bedCount"><%= record.bed_count %> Bed</span>
+                            </div>
+                            <div class="cell-info--row">
+                                <span class="cell-info--review"><%= record.review_count %></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <% }); %>
+            </div>
+            <!--pagination goes here-->
+            <div id="pagination"></div>
+
+            <!--footer goes here-->
+            <footer class="mdl-mini-footer">
+                <div class="mdl-mini-footer__left-section">
+                    <div class="mdl-logo">Title</div>
+                    <ul class="mdl-mini-footer__link-list">
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Privacy & Policy</a></li>
+                        <li><a href="#" id="footer-listing-count"><%= listings_count %></a></li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+
+        <!--map goes here-->
+        <div id="sidebar-wrap"><div id="map"></div></div>
+
+    </div>
+
+
+
+
+
+    <script>
+        function mapLoaded() {
+            <% listings.forEach(function(record){ %>
+            createMarker(<%= record.latitude %>, <%= record.longitude %>, <%= record.id %>);
+            <% }); %>
+            fitMarkers();
+        }
+        myModule.createPagination(<%= listings_count %>);
+
+
+
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYmqhY-KcOz1kHrx6JlKK7Qgsl
+    oTZNRp8&libraries=places&callback=initAutocomplete" onload="mapLoaded()"></script>
+
+
+</body>
+</html>
+
