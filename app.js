@@ -15,6 +15,7 @@ var s = require('./routes/s');
 var rooms = require('./routes/rooms');
 var api = require('./routes/api');
 var authenticate = require('./routes/authenticate');
+var dashboard = require('./routes/dashboard');
 
 var app = express();
 dotenv.config();
@@ -40,6 +41,7 @@ app.use('/s', s);
 app.use('/rooms', rooms);
 app.use('/api', api);
 app.use('/authenticate', authenticate);
+app.use('/dashboard', dashboard);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

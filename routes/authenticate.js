@@ -9,6 +9,14 @@ var router = express.Router();
 const saltRounds = 10;
 
 
+/* GET authentication. */
+router.get('/', function (req, res) {
+    res.render('authenticate', {
+        title: 'Sign in / Login'
+    });
+});
+
+
 
 /* POST authentication. */
 router.post('/', function(req, res, next) {

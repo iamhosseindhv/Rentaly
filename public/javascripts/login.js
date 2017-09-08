@@ -79,10 +79,16 @@ function handleFormSuccess(data) {
             });
         } else {
             $('.submit-btn').css('background-color', '#16b74f');
+            const isLoginPage = $('.submit-btn').text() === 'Login';
+            if (isLoginPage){
+                //here you should redirect to referer url, (the url user has been redirected from), if any
+                window.location = '/';
+            } else {
+                //verify email
+            }
         }
     }
-    //enable button again
-    $('.submit-btn').prop('disabled', false);
+    $('.submit-btn').prop('disabled', false);   //enable button again
 }
 
 
