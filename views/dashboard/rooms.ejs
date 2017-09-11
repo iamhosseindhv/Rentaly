@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--vazir font-->
+    <link type="text/css" rel="stylesheet" href="https://cdn.rawgit.com/rastikerdar/vazir-font/v4.4.1/dist/font-face.css" />
+
+    <link rel='stylesheet' href='/stylesheets/dashboard.css' />
+
+
+
+</head>
+<body>
+
+    <% include ../partials/header.html %>
+
+    <div id="nav-wrapper">
+        <nav class="responsive-container">
+            <a href="">Messages</a>
+            <a href="" class="active">Your Rooms</a>
+            <a href="">Profile</a>
+            <a href="">Account</a>
+        </nav>
+    </div>
+
+    <div class="responsive-container">
+        <div class="grid">
+            <div class="cell column-3">
+                <ul class="side-nav">
+                    <li class="side-nav-item active">Your Listings</li>
+                    <li class="side-nav-item">Reservations Calender</li>
+                    <li class="side-nav-item">Add New Listing</li>
+                </ul>
+            </div>
+            <div class="cell column-9">
+                sfgfgghhg
+            </div>
+        </div>
+    </div>
+
+
+
+    <h1>Active tab is: <%= activeTab %></h1>
+
+
+<style>
+    .grid {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
+        margin: 0 auto;
+        -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+        padding: 8px;
+    }
+    .cell {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        margin-top: 30px !important;
+    }
+    .column-3, .column-9 {
+        width: 100%;
+        /*border: 1px solid #767676;*/
+    }
+    #nav-wrapper .active {
+        border-bottom: 3px solid #fd5c63;
+        color: #fff;
+    }
+    #nav-wrapper {
+        text-align: center;
+        height: 39px !important;
+        overflow-x: auto;
+        white-space: nowrap;
+        background-color: #484848;
+    }
+    .responsive-container {
+        font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    nav {
+        text-align: left;
+    }
+    nav a {
+        font-size: 15px;
+        display: inline-block;
+        color: #d9d9d9;
+        border-bottom: 3px solid transparent;
+        text-decoration: none;
+        padding: 8px 12px;
+        line-height: 20px;
+    }
+    .side-nav {
+        padding: 0;
+        margin: 0;
+    }
+    .side-nav-item {
+        text-decoration: none;
+        padding: 8px 0;
+        display: inline-block;
+        color: #767676;
+    }
+    .side-nav .active {
+        color: #484848 !important;
+        font-weight: bold;
+    }
+    .side-nav-item:hover {
+        color: #d9d9d9;
+    }
+    .side-nav-item:last-child {
+        text-align: center;
+        border-radius: 3px;
+        padding: 7px 10px;
+        background-color: purple;
+        margin-top: 8px;
+        color: #fff;
+    }
+
+    @media (min-width: 744px){
+        .responsive-container {
+            width: 696px;
+        }
+        .column-3 {
+            width: 25%;
+        }
+        .column-9 {
+            width: 75%;
+        }
+        .side-nav-item {
+            display: block;
+        }
+    }
+
+    @media (min-width: 1128px){
+        .responsive-container {
+            width: 1080px;
+        }
+    }
+
+</style>
+
+
+
+</body>
+
+
+</html>

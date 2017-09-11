@@ -7,15 +7,14 @@ var router = express.Router();
 /* GET dashboard page. */
 router.get('/', function(req, res, next) {
     if (req.isAuthenticated){
-        next();
+        res.redirect('/dashboard/rooms');
     } else {
         res.redirect('/authenticate');
     }
 });
 
-
 router.get('/:tab', function(req, res) {
-    const activeTab = query.params.tab;
+    const activeTab = req.params.tab;
     // const user = req.user;
 
     properties = {};
@@ -23,7 +22,17 @@ router.get('/:tab', function(req, res) {
     properties.activeTab = activeTab;
     // properties.user = user;
 
-    res.render('dashboard', properties);
+
+    switch (activeTab){
+        case 'rooms':
+            res.render('dashboard/rooms', properties);
+            break;
+        case 'index':
+            res.render('dashboard/index', properties);
+            break;
+    }
+
+
 });
 
 

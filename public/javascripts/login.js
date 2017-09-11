@@ -84,7 +84,7 @@ function handleFormSuccess(data) {
                 //here you should redirect to referer url, (the url user has been redirected from), if any
                 window.location = '/';
             } else {
-                //verify email
+                //send verification email and user has to enter code to verify
             }
         }
     }
