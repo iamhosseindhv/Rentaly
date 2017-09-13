@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0a3734b-614c-465a-ada2-ad49b70c8263" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/dashboard/rooms.ejs" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/dashboard.ejs" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/dashboard/header-container.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/stylesheets/dashboard.css" afterPath="$PROJECT_DIR$/public/stylesheets/dashboard/rooms.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/stylesheets/kamadatepicker.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/searchResult/kamadatepicker.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/stylesheets/searchResult.css" afterPath="$PROJECT_DIR$/public/stylesheets/searchResult/searchResult.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/login.js" afterPath="$PROJECT_DIR$/public/javascripts/login.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/dashboard.css" afterPath="$PROJECT_DIR$/public/stylesheets/dashboard.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/dashboard.js" afterPath="$PROJECT_DIR$/routes/dashboard.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/authenticate.ejs" afterPath="$PROJECT_DIR$/views/authenticate.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/partials/header.html" afterPath="$PROJECT_DIR$/views/partials/header.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/dashboard/rooms.ejs" afterPath="$PROJECT_DIR$/views/dashboard/rooms.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/searchResult.ejs" afterPath="$PROJECT_DIR$/views/searchResult.ejs" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -36,31 +35,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rooms.ejs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="rooms.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/dashboard/rooms.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-770">
-              <caret line="71" column="26" lean-forward="true" selection-start-line="71" selection-start-column="26" selection-end-line="71" selection-end-column="26" />
+            <state relative-caret-position="337">
+              <caret line="28" column="45" lean-forward="false" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/stylesheets/dashboard.css">
+      <file leaf-file-name="rooms.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/stylesheets/dashboard/rooms.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="authenticate.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/authenticate.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="31" lean-forward="true" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+            <state relative-caret-position="408">
+              <caret line="71" column="43" lean-forward="false" selection-start-line="71" selection-start-column="43" selection-end-line="71" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -72,14 +61,13 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="CSS File" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>allowSearchByMapHandler</find>
       <find>cityName</find>
       <find>queryString</find>
       <find>renderSearchResultPage</find>
@@ -109,6 +97,7 @@
       <find>err.f</find>
       <find>signup-</find>
       <find>sign</find>
+      <find>white</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -149,7 +138,6 @@
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/routes/authenticate.js" />
         <option value="$PROJECT_DIR$/views/partials/login.html" />
-        <option value="$PROJECT_DIR$/views/searchResult.ejs" />
         <option value="$PROJECT_DIR$/public/javascripts/login.js" />
         <option value="$PROJECT_DIR$/views/authenticate.ejs" />
         <option value="$PROJECT_DIR$/public/stylesheets/dashboard.css" />
@@ -157,7 +145,12 @@
         <option value="$PROJECT_DIR$/views/dashboard.ejs" />
         <option value="$PROJECT_DIR$/views/dashboard/dashboard.ejs" />
         <option value="$PROJECT_DIR$/routes/dashboard.js" />
+        <option value="$PROJECT_DIR$/views/searchResult.ejs" />
+        <option value="$PROJECT_DIR$/public/stylesheets/dashboard/dashboard.css" />
+        <option value="$PROJECT_DIR$/public/stylesheets/dashboard/header-container.css" />
+        <option value="$PROJECT_DIR$/views/dashboard/header-container.html" />
         <option value="$PROJECT_DIR$/views/dashboard/rooms.ejs" />
+        <option value="$PROJECT_DIR$/public/stylesheets/dashboard/rooms.css" />
       </list>
     </option>
   </component>
@@ -399,6 +392,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="stylesheets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webweb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webweb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="javascripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -463,11 +478,11 @@
       <recent name="$PROJECT_DIR$/public/stylesheets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/stylesheets/dashboard" />
+      <recent name="$PROJECT_DIR$/public/stylesheets/searchResult" />
       <recent name="$PROJECT_DIR$/views/dashboard" />
       <recent name="$PROJECT_DIR$/views/partials" />
       <recent name="$PROJECT_DIR$/public/javascripts" />
-      <recent name="$PROJECT_DIR$/public/javascripts/searchResultMap" />
-      <recent name="$PROJECT_DIR$/public/images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -588,7 +603,7 @@
       <workItem from="1504418856059" duration="8415000" />
       <workItem from="1504469899343" duration="28133000" />
       <workItem from="1504607208389" duration="16725000" />
-      <workItem from="1504780424581" duration="21701000" />
+      <workItem from="1504780424581" duration="25542000" />
     </task>
     <task id="LOCAL-00001" summary="improved">
       <created>1504902264476</created>
@@ -597,11 +612,18 @@
       <option name="project" value="LOCAL" />
       <updated>1504902264477</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="improved 2">
+      <created>1505135317088</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1505135317089</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="317445000" />
+    <option name="totallyTimeSpent" value="321286000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -636,7 +658,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="improved" />
-    <option name="LAST_COMMIT_MESSAGE" value="improved" />
+    <MESSAGE value="improved 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="improved 2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -645,14 +668,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/core-scripting.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="46" column="22" lean-forward="false" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/s-query.js" />
     <entry file="file://$PROJECT_DIR$/node_modules/body-parser/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1865">
@@ -704,7 +719,7 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/kamadatepicker.min.css">
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/searchResult/kamadatepicker.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="469" lean-forward="false" selection-start-line="0" selection-start-column="462" selection-end-line="0" selection-end-column="469" />
@@ -864,14 +879,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/s.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-21">
-          <caret line="12" column="74" lean-forward="false" selection-start-line="12" selection-start-column="74" selection-end-line="12" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/searchMap/searchMapHandler.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="804">
@@ -884,14 +891,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="478">
           <caret line="40" column="6" lean-forward="true" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/authenticate.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="31" lean-forward="true" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -936,15 +935,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/dashboard.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/searchResult.css">
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/searchResult/searchResult.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
           <caret line="252" column="0" lean-forward="true" selection-start-line="252" selection-start-column="0" selection-end-line="252" selection-end-column="0" />
@@ -960,10 +951,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/searchResult.ejs">
+    <entry file="file://$PROJECT_DIR$/routes/s.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="147" column="25" lean-forward="false" selection-start-line="147" selection-start-column="25" selection-end-line="147" selection-end-column="25" />
+        <state relative-caret-position="180">
+          <caret line="12" column="74" lean-forward="false" selection-start-line="12" selection-start-column="74" selection-end-line="12" selection-end-column="74" />
           <folding />
         </state>
       </provider>
@@ -978,10 +969,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/views/searchResult.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="46" lean-forward="true" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/dashboard/header-container.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/authenticate.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="31" lean-forward="true" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/dashboard/header-container.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="11" lean-forward="true" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/dashboard/rooms.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-770">
-          <caret line="71" column="26" lean-forward="true" selection-start-line="71" selection-start-column="26" selection-end-line="71" selection-end-column="26" />
+        <state relative-caret-position="337">
+          <caret line="28" column="45" lean-forward="false" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/dashboard/rooms.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="71" column="43" lean-forward="false" selection-start-line="71" selection-start-column="43" selection-end-line="71" selection-end-column="43" />
           <folding />
         </state>
       </provider>
