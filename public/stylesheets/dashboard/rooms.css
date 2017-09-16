@@ -7,9 +7,6 @@ body {
 }
 
 
-
-
-
 .grid {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -26,13 +23,25 @@ body {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    margin-top: 30px !important;
+}
+.box {
+    position: relative;
+    padding-top: 66.66%; /* 3:2 Aspect Ratio */
+    width: 100%;
+}
+.margin-free {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
 
 
 
 .column-3, .column-9 {
     width: 100%;
+    margin-top: 30px !important;
     /*border: 1px solid #767676;*/
 }
 .responsive-container {
@@ -64,6 +73,7 @@ body {
     text-align: center;
     border-radius: 3px;
     padding: 8px 10px;
+    width: 60%;
     background-color: rgba(128, 0, 128, 1);
     margin-top: 8px;
     color: #fff;
@@ -71,6 +81,72 @@ body {
 .side-nav-item:last-child:hover {
     background-color: rgba(128, 0, 128, 0.7);
 }
+
+
+
+.listing {
+    -webkit-box-shadow: 0 3px 3px -3px rgba(0,0,0,.3);
+    box-shadow: 0 3px 3px -3px rgba(0,0,0,.3);
+    padding: 0;
+}
+.listing-images, .listing-info {
+    width: 100%;
+}
+.listing-images {
+    background-color: #f4f4f5;
+    border-right: none;
+    border-bottom: 1px solid #DFDFE1;
+}
+.listing-img {
+    width: 100%;
+    border: 1px solid transparent;
+}
+.listing-img-additional {
+    display: none;
+    border-right: none;
+}
+.listing-price {
+    padding: 10px 15px;
+}
+.listing-info {
+    position: relative;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    background-color: #f4f4f5;
+    padding: 15px;
+    font-size: 15px;
+}
+.listing-info span {
+    display: block;
+}
+.cell-thumbnail {
+    position: relative;
+    padding-top: 66.66%; /* 3:2 Aspect Ratio */
+    width: 100%;
+}
+
+.cell-thumbnail img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    -o-object-fit: cover;
+}
+.edit-btn {
+    position: absolute;
+    margin-top: 8px;
+    padding: 8px 12px;
+    bottom: 15px;
+    right: 15px;
+    background-color: #fd5c63;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    border-radius: 3px;
+    font-size: 12px;
+    color: #fff;
+    cursor: pointer;
+}
+
+
 
 @media (min-width: 744px){
     .responsive-container {
@@ -85,6 +161,21 @@ body {
     .side-nav-item {
         display: block;
     }
+    .listing-images {
+        width: 55%;
+        border-right: 1px solid #DFDFE1;
+        border-bottom: none;
+    }
+    .listing-info {
+        width: 45%;
+    }
+    .listing-img {
+        width: 50%;
+    }
+    .listing-img-additional {
+        display: block;
+    }
+
 }
 
 @media (min-width: 1128px){

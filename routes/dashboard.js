@@ -5,39 +5,64 @@ var express = require('express');
 var router = express.Router();
 
 /* GET dashboard page. */
-router.get('/', function(req, res, next) {
-    if (req.isAuthenticated){
-        res.redirect('/dashboard/rooms');
-    } else {
-        res.redirect('/authenticate');
-    }
+router.get('/', isAuthenticated, function(req, res) {
+    res.redirect('/dashboard/rooms');
 });
 
-router.get('/:tab', function(req, res) {
+router.get('/:tab', isAuthenticated, function(req, res) {
     const activeTab = req.params.tab;
-    // const user = req.user;
+    const user = req.user;
 
-    properties = {};
-    properties.title = 'Dashboard';
+    var properties = {};
     properties.activeTab = activeTab;
-    // properties.user = user;
-
+    properties.user = user;
 
     switch (activeTab){
         case 'rooms':
-            res.render('dashboard/rooms', properties);
+            handleRooms(properties, function (modifiedProperties) {
+                res.render('dashboard/rooms', modifiedProperties);
+            });
             break;
-        case 'index':
-            res.render('dashboard/index', properties);
+        case 'profile':
+            res.render('dashboard/profile', properties);
             break;
     }
-
-
+    
 });
 
 
 
 
+
+
+
+
+
+function handleRooms(properties, callback) {
+    const db = require('../database');
+    properties.title = 'Rooms';
+    db.query('SELECT * FROM listing WHERE user_id = ?', [properties.user.id], function (err, results) {
+        if (err) throw err;
+        properties.my_listings = results;
+        properties.my_listings_count = results.length;
+        callback(properties);
+    });
+}
+
+
+function isAuthenticated(req, res, next) {
+    console.log(req.isAuthenticated);
+
+    if (req.isAuthenticated === undefined){
+        throw 'STATUS IS UNDEFINED'
+    }
+
+    if (req.isAuthenticated === true){
+        next();
+    } else {
+        res.redirect('/authenticate');
+    }
+}
 
 
 

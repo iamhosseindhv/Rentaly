@@ -14,11 +14,12 @@
 
 
 </head>
-<body>
+<body onscroll="fixHeader()">
 
     <% include ../partials/header.html %>
     <% include ../dashboard/header-container.html %>
 
+<div class="content">
 
     <div class="responsive-container">
         <div class="grid">
@@ -30,15 +31,71 @@
                 </ul>
             </div>
             <div class="cell column-9">
-                sfgfgghhg
+                <% my_listings.forEach(function(listing){ %>
+                <div class="listing-mother" style="padding: 8px;">
+                    <div class="listing grid">
+                        <div class="cell listing-images">
+                            <div class="grid" style="padding: 0;">
+                                <div class="cell listing-img">
+                                    <div class="box">
+                                        <div class="margin-free">
+                                            <div class="cell-thumbnail">
+                                                <img class="margin-free" src= <%= listing.thumbnail_img %>>
+                                                <!--<img class="margin-free" src="/images/owl.jpg">-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="listing-price">
+                                        <span><%= listing.price %> T</span>
+                                    </div>
+                                </div>
+                                <div class="cell listing-img listing-img-additional">
+                                    <div class="box">
+                                        <div class="margin-free">
+                                            <div class="cell-thumbnail">
+                                                <img class="margin-free" src= <%= listing.thumbnail_img %>>
+                                                <!--<img class="margin-free" src="/images/owl.jpg">-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cell listing-info">
+                            <span><%= listing.bedroom_count %> Bedroom </span>
+                            <span><%= listing.type %></span>
+                            <span><%= listing.location %></span>
+                            <span>Added on: <%= listing.creation_date %></span>
+                            <button class="edit-btn">Edit</button>
+                        </div>
+                    </div>
+                </div>
+                <% }); %>
             </div>
         </div>
     </div>
 
+</div>
+
 
 
     <h1>Active tab is: <%= activeTab %></h1>
+    <h1>listins count: <%= my_listings_count %></h1>
+    <h1>email: <%= user.email %></h1>
 
+
+    <script>
+        var wrap = $('#nav-wrapper');
+        function fixHeader() {
+            if (window.scrollY > 60) {
+                wrap.addClass("nav-wrapper--fixed");
+                $('.content').css('padding-top', '38px');
+            } else {
+                wrap.removeClass("nav-wrapper--fixed");
+                $('.content').css('padding-top', '0');
+            }
+        }
+    </script>
 
 </body>
 </html>

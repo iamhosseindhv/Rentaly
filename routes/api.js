@@ -88,7 +88,7 @@ function makeNewQuery(query) {
         }
         sqlAll += statement.listingStatement + ";";
         sqlCount += statement.countStatement + ";";
-        console.log(sqlAll);
+        // console.log(sqlAll);
         const final = {};
         db.query(sqlCount, function (error, result) {
             if (error) reject('some err getting total count');

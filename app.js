@@ -64,7 +64,7 @@ app.use(function(err, req, res, next) {
 
 function authenticateRequest(req, res, next) {
     const possibleToken = req.session.token;
-    // check header or url parameters or post parameters for token
+    // check header or cookies for token
     const token = possibleToken || req.headers['x-access-token'];
     // decode token
     if (token) {
@@ -75,9 +75,11 @@ function authenticateRequest(req, res, next) {
                 next();
             } else {
                 // if everything is good, save to request for use in other routes
-                req.decoded = decoded;
-                req.isAuthenticated = true;
-                next();
+                getUserInfo(decoded.user_id, function (user) {
+                    req.isAuthenticated = true;
+                    req.user = user;
+                    next();
+                });
             }
         });
     } else {
@@ -87,6 +89,15 @@ function authenticateRequest(req, res, next) {
     console.log('isAuthenticated: ' + req.isAuthenticated);
 }
 
+
+
+function getUserInfo(id, callback) {
+    const db = require('./database');
+    db.query('SELECT * FROM users WHERE id = ?', [id], function (err, result) {
+        if (err) throw err;
+        callback(result[0]);
+    });
+}
 
 
 module.exports = app;
