@@ -30,7 +30,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px !important;
-    border: 1px solid #933ec5;
+    /*border: 1px solid #fd5c63;*/
 }
 
 
@@ -39,16 +39,31 @@ body {
     width: 100%;
 }
 
+.content {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 40px;
+    /*border: 1px solid #933ec5;*/
+}
+
+.form-row {
+    position: relative;
+    margin-bottom: 25px;
+    /*margin-right: 10px;*/
+    width: 50%;
+}
+
 .input-field:focus {
     border: solid 1px #707070;
 }
 
 .input-field {
-    box-sizing : border-box;
+    box-sizing: border-box;
     border-radius: 3px;
-    width: 100%;
+    width: 97%;
     padding: 12px !important;
-    margin-top: 15px;
     border: solid 1px #dcdcdc;
     transition: border 0.3s;
     line-height: 25px;
@@ -60,15 +75,26 @@ body {
     color: rgb(118, 118, 118);
 }
 
-
-
+.legend {
+    color: #4d4d4d;
+    width: 100% !important;
+    margin-bottom: 8px;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: bold
+}
+.form-description {
+    color: #767676;
+    margin-bottom: 8px;
+    font-size: 18px;
+    line-height: 24px;
+}
 
 .input-select {
+    width: 97%;
     box-sizing : border-box;
     border-radius: 3px;
-    /*width: 100%;*/
     padding: 12px !important;
-    margin-top: 15px;
     border: solid 1px #dcdcdc;
     transition: border 0.3s;
     line-height: 25px;
@@ -78,14 +104,43 @@ body {
     background: white !important;
 }
 
+.dropdown-icon {
+    position: absolute !important;
+    top: 51px !important;
+    right: 36px !important;
+    line-height: 0 !important;
+    pointer-events: none !important;
+}
 
+.submit-btn {
+    background-color: #fd5c63;
+    padding: 7px 21px !important;
+    color: #fff;
+    margin-top: 15px;
+    border-radius: 3px;
+    line-height: 25px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+
+
+@media (max-width: 743px) {
+    .form-row {
+        width: 100%;
+    }
+    .input-field {
+        margin-right: 0;
+    }
+}
 
 @media (min-width: 744px) {
     .responsive-container {
         width: 696px;
     }
 }
-
 
 @media (min-width: 1128px){
     .responsive-container {

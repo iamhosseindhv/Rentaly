@@ -8,6 +8,7 @@
      <!--style sheets-->
      <link rel='stylesheet' href='/stylesheets/newListing.css'/>
 
+
 </head>
 <body>
 
@@ -16,12 +17,66 @@
      <div class="responsive-container">
           <div class="grid">
                <form id="my-form" method="POST" action="/edit/new-listing">
-                    <div>
-                         <input name="" class="input-field" type="text" id="" placeholder="Pass">
+                    <div class="grid content">
+                         <label class="legend">Property Details</label>
+                         <div class="form-row">
+                              <div class="form-description"><span>Select the type of your house</span></div>
+                              <select name="house_type" class="input-select">
+                                   <option disabled>Select one</option>
+                                   <option value="Entire House">Entire House</option>
+                                   <option value="Private Room">Private Room</option>
+                                   <option value="Shared Room">Shared Room</option>
+                              </select>
+                              <span class="dropdown-icon">
+                                   <svg viewBox="0 0 18 18" role="presentation" aria-hidden="true" focusable="false" style="display:block; fill:#484848; height:16px; width:16px;">
+                                        <path fill-rule="evenodd" d="M16.291 4.295a1 1 0 1 1 1.414 1.415l-8 7.995a1 1 0 0 1-1.414 0l-8-7.995a1 1 0 1 1 1.414-1.415l7.293 7.29 7.293-7.29z"></path>
+                                   </svg>
+                              </span>
+                         </div>
+                         <div class="form-row">
+                              <div class="form-description"><span>How many guest can be fitted in this property?</span></div>
+                              <input name="max_guest" class="input-field" type="number" placeholder="Guests">
+                         </div>
+                         <div class="form-row">
+                              <div class="form-description"><span>How many bedrooms are there?</span></div>
+                              <input name="bedroom_count" class="input-field" type="number" placeholder="Bedrooms">
+                         </div>
+                         <div class="form-row">
+                              <div class="form-description"><span>How many beds are there?</span></div>
+                              <input name="bed_count" class="input-field" type="number" placeholder="Beds">
+                         </div>
+                         <div class="form-row">
+                              <div class="form-description"><span>How many bathrooms are there?</span></div>
+                              <input name="bathroom_count" class="input-field" type="number" placeholder="Bathrooms">
+                         </div>
                     </div>
-                    <div>
-                         <input name="" class="input-field" type="text" id="" placeholder="Shit">
+                    <div class="grid content">
+                         <label class="legend">Location</label>
+                         <div class="form-row">
+                              <div class="form-description"><span>What city this property is located in?</span></div>
+                              <input name="location" class="input-field" type="text" placeholder="City">
+                         </div>
+                         <div class="form-row">
+                              <div class="form-description"><span>Give us the full address of the property</span></div>
+                              <input name="full_address" class="input-field" type="text" placeholder="Full Address">
+                         </div>
+                         <!--choose the exact location from the map-->
                     </div>
+                    <div class="grid content">
+                         <label class="legend">Booking Details</label>
+                         <div class="form-row">
+                              <div class="form-description"><span>Write a nice title for this property</span></div>
+                              <input name="title" class="input-field" type="text" placeholder="Title (Nice one!)">
+                         </div>
+                         <div class="form-row">
+                              <div class="form-description"><span>Enter a nightly price for this property</span></div>
+                              <input name="price" class="input-field" type="text" placeholder="Price">
+                         </div>
+                    </div>
+                    <div class="grid">
+                         <button type="submit" class="submit-btn">Submit</button>
+                    </div>
+
                </form>
           </div>
      </div>
