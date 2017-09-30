@@ -4,7 +4,6 @@
     <list default="true" id="e0a3734b-614c-465a-ada2-ad49b70c8263" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/edit.js" afterPath="$PROJECT_DIR$/routes/edit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/newListing.ejs" afterPath="$PROJECT_DIR$/views/newListing.ejs" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,10 +18,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="newListing.ejs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="newListing.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/newListing.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
+            <state relative-caret-position="70">
               <caret line="71" column="36" lean-forward="false" selection-start-line="71" selection-start-column="36" selection-end-line="71" selection-end-column="36" />
               <folding />
             </state>
@@ -49,11 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="edit.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/edit.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="111" column="21" lean-forward="false" selection-start-line="111" selection-start-column="21" selection-end-line="111" selection-end-column="21" />
+            <state relative-caret-position="1695">
+              <caret line="111" column="20" lean-forward="true" selection-start-line="111" selection-start-column="20" selection-end-line="111" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -158,8 +157,8 @@
         <option value="$PROJECT_DIR$/views/partials/header.html" />
         <option value="$PROJECT_DIR$/public/javascripts/newListing.js" />
         <option value="$PROJECT_DIR$/public/stylesheets/newListing.css" />
-        <option value="$PROJECT_DIR$/routes/edit.js" />
         <option value="$PROJECT_DIR$/views/newListing.ejs" />
+        <option value="$PROJECT_DIR$/routes/edit.js" />
       </list>
     </option>
   </component>
@@ -558,7 +557,7 @@
       <workItem from="1505682133363" duration="426000" />
       <workItem from="1505804446332" duration="391000" />
       <workItem from="1505945957902" duration="353000" />
-      <workItem from="1506537121554" duration="23239000" />
+      <workItem from="1506537121554" duration="23293000" />
     </task>
     <task id="LOCAL-00001" summary="improved">
       <created>1504902264476</created>
@@ -623,11 +622,18 @@
       <option name="project" value="LOCAL" />
       <updated>1506798261795</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="bug concerning lat N lng fixed">
+      <created>1506798857767</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1506798857767</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="365263000" />
+    <option name="totallyTimeSpent" value="365317000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -669,7 +675,8 @@
     <MESSAGE value="new listing UI implemented" />
     <MESSAGE value="new listing page almost done" />
     <MESSAGE value="new listing page done" />
-    <option name="LAST_COMMIT_MESSAGE" value="new listing page done" />
+    <MESSAGE value="bug concerning lat N lng fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug concerning lat N lng fixed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -990,14 +997,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/edit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="111" column="21" lean-forward="false" selection-start-line="111" selection-start-column="21" selection-end-line="111" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/newListing.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="415">
@@ -1016,8 +1015,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/newListing.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
+        <state relative-caret-position="70">
           <caret line="71" column="36" lean-forward="false" selection-start-line="71" selection-start-column="36" selection-end-line="71" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/edit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1695">
+          <caret line="111" column="20" lean-forward="true" selection-start-line="111" selection-start-column="20" selection-end-line="111" selection-end-column="20" />
           <folding />
         </state>
       </provider>
