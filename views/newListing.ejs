@@ -64,7 +64,14 @@
                               <div class="form-description"><span>Give us the full address of the property</span></div>
                               <input name="full_address" class="input-field" type="text" placeholder="Full Address">
                          </div>
-                         <!--choose the exact location from the map-->
+                         <div class="form-row marginless">
+                              <div class="form-description"><span>Place a marker on the exact location of the property</span></div>
+                         </div>
+                         <div class="form-row marginless">
+                              <input disabled name="longtitute" id="lng" class="input-field half-field" type="text" placeholder="Longtitute">
+                              <input disabled name="latitude" id="lat" class="input-field half-field" type="text" placeholder="Latitude">
+                         </div>
+                         <div class="map" id="map"></div>
                     </div>
                     <div class="grid content">
                          <label class="legend">Booking Details</label>
@@ -88,5 +95,6 @@
 
      <div class="gap" style="height: 50px;"></div>
 
+     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYmqhY-KcOz1kHrx6JlKK7QgsloTZNRp8&callback=initMap"></script>
 </body>
 </html>

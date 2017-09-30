@@ -52,9 +52,75 @@ function handleFormSuccess(data) {
     $('.submit-btn').prop('disabled', false);   //enable button again
 }
 
-
-
 function handleFormFailure(data) {
     console.log('An error occurred.');
     console.log(data);
+}
+
+
+var map;
+var markers = [];
+function initMap() {
+    var styles = {
+        hide: [{
+            featureType: 'poi.business',
+            stylers: [{visibility: 'off'}]
+            },
+            {
+                featureType: 'transit',
+                elementType: 'labels.icon',
+                stylers: [{visibility: 'off'}]
+            }
+        ]
+    };
+
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: 35.6891975, lng: 51.3889735},
+        zoom: 10,
+        mapTypeId: 'roadmap',
+        disableDefaultUI: true,
+        fullscreenControl: false,
+        mapTypeControl: true,
+        mapTypeControlOptions: {
+            style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+            mapTypeIds: ['roadmap','satellite'],
+            position: google.maps.ControlPosition.RIGHT_BOTTOM
+        },
+        zoomControl: true,
+        zoomControlOptions: {
+            position: google.maps.ControlPosition.RIGHT_TOP
+        }
+    });
+    map.setOptions({styles: styles['hide']});
+
+    map.addListener('click', function(event) {
+        addMarker(event.latLng);
+        populateFields();
+    });
+}
+
+function addMarker(location) {
+    if (markers.length < 1){
+        var marker = new google.maps.Marker({
+            position: location,
+            draggable: true,
+            map: map
+        });
+        markers.push(marker);
+    } else {
+        clearMarkers();
+        addMarker(location);
+    }
+}
+
+function populateFields() {
+    const lat = markers[0].getPosition().lat();
+    const lng = markers[0].getPosition().lng();
+    $('#lat').val(lat);
+    $('#lng').val(lng);
+}
+
+function clearMarkers() {
+    markers[0].setMap(null);
+    markers = [];
 }

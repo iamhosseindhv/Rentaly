@@ -97,6 +97,8 @@ function validateInputs(req) {
     req.checkBody('full_address', 'You should enter \'Full Address\' ').notEmpty();
     req.checkBody('title', 'You should enter \'Title\' ').notEmpty();
     req.checkBody('price', 'You should enter \'Price\' ').notEmpty();
+    req.checkBody('longtitute', 'You should enter \'Longtitute\' ').notEmpty();
+    req.checkBody('latitude', 'You should enter \'Latitude\' ').notEmpty();
     req.checkBody('location', '\'Location\' must be 2-60 character').len(1, 60);
     req.checkBody('title', '\'Title\' must be 5-60 character').len(5, 60);
     req.checkBody('full_address', '\'Full Address\' must be 5-150 character').len(5, 150);
