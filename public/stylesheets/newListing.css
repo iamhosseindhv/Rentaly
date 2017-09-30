@@ -83,6 +83,12 @@ body {
     line-height: 24px;
     font-weight: bold
 }
+
+#errors--property-details, #errors--location, #errors--booking-details {
+    width: 100%;
+    color: #ff4d4d;
+}
+
 .form-description {
     color: #767676;
     margin-bottom: 8px;
@@ -123,6 +129,18 @@ body {
     border: none;
     outline: none;
     cursor: pointer;
+}
+
+#success-report {
+    background-color: rgba(22, 183, 79, .6);
+    padding: 7px 21px !important;
+    visibility: hidden;
+    color: #fff;
+    margin-top: 15px;
+    margin-left: 15px;
+    border-radius: 3px;
+    line-height: 25px;
+    font-size: 18px;
 }
 
 

@@ -7,6 +7,8 @@
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
      <!--style sheets-->
      <link rel='stylesheet' href='/stylesheets/newListing.css'/>
+     <!--javascripts-->
+     <script type='text/javascript' src='/javascripts/newListing.js'></script>
 
 
 </head>
@@ -19,6 +21,7 @@
                <form id="my-form" method="POST" action="/edit/new-listing">
                     <div class="grid content">
                          <label class="legend">Property Details</label>
+                         <div id="errors--property-details"></div>
                          <div class="form-row">
                               <div class="form-description"><span>Select the type of your house</span></div>
                               <select name="house_type" class="input-select">
@@ -52,6 +55,7 @@
                     </div>
                     <div class="grid content">
                          <label class="legend">Location</label>
+                         <div id="errors--location"></div>
                          <div class="form-row">
                               <div class="form-description"><span>What city this property is located in?</span></div>
                               <input name="location" class="input-field" type="text" placeholder="City">
@@ -64,22 +68,25 @@
                     </div>
                     <div class="grid content">
                          <label class="legend">Booking Details</label>
+                         <div id="errors--booking-details"></div>
                          <div class="form-row">
                               <div class="form-description"><span>Write a nice title for this property</span></div>
                               <input name="title" class="input-field" type="text" placeholder="Title (Nice one!)">
                          </div>
                          <div class="form-row">
                               <div class="form-description"><span>Enter a nightly price for this property</span></div>
-                              <input name="price" class="input-field" type="text" placeholder="Price">
+                              <input name="price" class="input-field" type="number" placeholder="Price">
                          </div>
                     </div>
                     <div class="grid">
                          <button type="submit" class="submit-btn">Submit</button>
+                         <div id="success-report">You're all set! Successfully added the property! Redirecting...</div>
                     </div>
-
                </form>
           </div>
      </div>
+
+     <div class="gap" style="height: 50px;"></div>
 
 </body>
 </html>
