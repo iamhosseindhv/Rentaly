@@ -109,6 +109,7 @@ function validateInputs(req) {
     // req.checkBody('price', '\'Price\' must be a number').isNumber();
 
     const err = req.validationErrors();
+    console.log(err);
     var errors = {};
     if (err){
         errors = {
