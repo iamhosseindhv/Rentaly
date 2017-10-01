@@ -30,11 +30,11 @@ router.post('/new-listing', isAuthenticated, function (req, res, next) {
         const bathroom_count = req.body.bathroom_count;
         const location = req.body.location;
         const full_address = req.body.full_address;
+        const longitude = req.body.longitude;
+        const latitude = req.body.latitude;
         const title = req.body.title;
         const price = req.body.price;
         const user_id = req.user.id;
-        const longitude = 123.123;
-        const latitude = 123.123;
         const creation_date = getTodayDate();
 
         const db = require('../database');
@@ -97,7 +97,7 @@ function validateInputs(req) {
     req.checkBody('full_address', 'You should enter \'Full Address\' ').notEmpty();
     req.checkBody('title', 'You should enter \'Title\' ').notEmpty();
     req.checkBody('price', 'You should enter \'Price\' ').notEmpty();
-    req.checkBody('longtitute', 'You should enter \'Longtitute\' ').notEmpty();
+    req.checkBody('longitude', 'You should enter \'Longitude\' ').notEmpty();
     req.checkBody('latitude', 'You should enter \'Latitude\' ').notEmpty();
     req.checkBody('location', '\'Location\' must be 2-60 character').len(1, 60);
     req.checkBody('title', '\'Title\' must be 5-60 character').len(5, 60);
@@ -121,7 +121,7 @@ function validateInputs(req) {
             if (param === 'house_type' || param === 'max_guest' || param === 'bedroom_count' || param === 'bed_count' || param === 'bathroom_count'){
                 errors.propery_details.push({ description: err[i].msg });
             }
-            if (param === 'location' || param === 'full_address') {
+            if (param === 'location' || param === 'full_address' || param === 'longitude' || param === 'latitude') {
                 errors.location.push({ description: err[i].msg });
             }
             if (param === 'title' || param === 'price') {

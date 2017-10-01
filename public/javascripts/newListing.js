@@ -7,7 +7,7 @@ $(document).ready(function() {
     $("#my-form").submit(function(e) {
         //avoid executing the actual submit of the form.
         e.preventDefault();
-        $('.submit-btn').prop('disabled', true);
+        initLoading();
 
         $.ajax({
             type: 'POST',
@@ -49,12 +49,24 @@ function handleFormSuccess(data) {
             window.location = '/dashboard/rooms';
         }, 5000 );
     }
-    $('.submit-btn').prop('disabled', false);   //enable button again
+    loadingDidEnd();
 }
 
 function handleFormFailure(data) {
     console.log('An error occurred.');
     console.log(data);
+}
+
+function initLoading() {
+    $('.submit-btn').prop('disabled', true);
+    $('.submit-btn').css('opacity', '0.5');
+    $('.loader').css('display', 'inline-block');
+}
+
+function loadingDidEnd() {
+    $('.submit-btn').prop('disabled', false);
+    $('.submit-btn').css('opacity', '1');
+    $('.loader').css('display', 'none');
 }
 
 
