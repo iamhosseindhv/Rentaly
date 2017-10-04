@@ -66,6 +66,10 @@ body {
     color: #484848 !important;
     font-weight: bold;
 }
+.side-nav-item a {
+    text-decoration: none;
+    color: inherit;
+}
 .side-nav-item:hover {
     color: #d9d9d9;
 }
