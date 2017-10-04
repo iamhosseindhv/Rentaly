@@ -27,12 +27,12 @@
                 <ul class="side-nav">
                     <li class="side-nav-item active">Your Listings</li>
                     <li class="side-nav-item">Reservations Calender</li>
-                    <li class="side-nav-item">Add New Listing</li>
+                    <li class="side-nav-item" id="new-listing-btn"><a href="/edit/new-listing">Add New Listing</a></li>
                 </ul>
             </div>
             <div class="cell column-9">
                 <% my_listings.forEach(function(listing){ %>
-                <div class="listing-mother" style="padding: 8px;">
+                <div id="<%= listing.id %>" class="listing-mother" style="padding: 8px;">
                     <div class="listing grid">
                         <div class="cell listing-images">
                             <div class="grid" style="padding: 0;">
@@ -81,7 +81,7 @@
 
     <h1>Active tab is: <%= activeTab %></h1>
     <h1>listins count: <%= my_listings_count %></h1>
-    <h1>email: <%= user.email %></h1>
+    <!--<h1>email: <%= user.email %></h1>-->
 
 
     <script>
