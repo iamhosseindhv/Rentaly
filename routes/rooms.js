@@ -10,38 +10,40 @@ var router = express.Router();
 
 
 router.get('/:id', function(req, res, next) {
-     //'id' is the listing id
      //find listing and render related page
-     findListing(res, req.params.id, renderPage);
+     var properties = {};
+     properties.title = 'Rooms';
+
+     findListing(req.params.id, properties, function (updatedProperties) {
+          if (updatedProperties.listing){
+               res.render('rooms', updatedProperties);
+          } else {
+               res.render('error-rooms');
+          }
+     });
 });
 
 
 
-var findListing = function (response, id, callback) {
-     var connection = mysql.createConnection({
-          host: "localhost",
-          user: "root",
-          password: "107109DehnavI",
-          database : 'Test'
-     });
-     connection.connect();
-     var sql = 'SELECT * FROM listing WHERE id = ' + connection.escape(id);
-     connection.query(sql, function (error, results) {
+
+
+
+var findListing = function (id, properties, callback) {
+     const db = require('../database');
+     const statement = 'SELECT * FROM listing WHERE id = ?';
+     db.query(statement, [id], function (error, results) {
           if (error) throw error;
-          // console.log(results[0]);
-          var listing = results[0];
-          callback(response, listing);
+          //there exist NO listing with the given id
+          if (!results[0]){
+              properties.listing = null;
+          } else {
+              properties.listing = results[0];
+          }
+          callback(properties);
      });
-     connection.end();
 };
 
 
-var renderPage = function (response, listing) {
-     response.render('rooms', {
-          title: 'Rooms',
-          listing: listing
-     });
-};
 
 
 module.exports = router;

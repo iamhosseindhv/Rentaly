@@ -2,25 +2,160 @@
 <html>
 <head>
     <title><%= title %></title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <!--jQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--vazir font-->
+    <link type="text/css" rel="stylesheet" href="https://cdn.rawgit.com/rastikerdar/vazir-font/v4.4.1/dist/font-face.css" />
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <!--date picker stuff-->
+    <script type='text/javascript' src='/javascripts/kamadatepicker.min.js'></script>
+    <link rel='stylesheet' href='/stylesheets/searchResult/kamadatepicker.min.css'/>
+
+    <!--specific files-->
+    <link rel='stylesheet' href='/stylesheets/rooms.css' />
+    <!--javascripts-->
+    <script type='text/javascript' src='/javascripts/rooms.js'></script>
 
 
 </head>
 <body>
 
-<p>Welcome to <%= title %></p>
-<p>Welcome to <%= title %></p>
-<p>Welcome to <%= title %></p>
-<p>Welcome to <%= title %></p>
-<p>Welcome to <%= title %></p>
+    <% include ./partials/header.html %>
+
+    <!--<div class="cell listing-images" style="background-image: url(<%= listing.thumbnail_img %>)">-->
+    <div class="cell listing-images" style="background-image: url('/images/owl.jpg')">
+
+    </div>
+
+    <div class="responsive-container">
+        <div class="grid padding-free">
+            <div class="cell column-4">
+                <div class="newcol">
+                    <div class="grid">
+                        <form id="my-form" method="post" action="/booking">
+                            <div class="content">
+                                <div class="form-row">
+                                    <div class="grid">
+                                        <div class="cell half-field">
+                                            <div class="form-description"><span>Check-in</span></div>
+                                            <input readonly name="checkin" id="checkin" class="input-field" type="text" placeholder="dd/mm/yyyy" style="border-bottom-right-radius: 0; border-top-right-radius: 0">
+                                        </div>
+                                        <div class="cell half-field">
+                                            <div class="form-description"><span>Check-out</span></div>
+                                            <input readonly name="checkin" id="checkout" class="input-field" type="text" placeholder="dd/mm/yyyy" style="border-bottom-left-radius: 0; border-top-left-radius: 0">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="grid">
+                                        <div class="form-description"><span>Number of Guests</span></div>
+                                        <input name="max_guest" class="input-field" type="number" placeholder="Number of Guests">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="grid">
+                                        <div class="form-description"><span><b>Price: </b><%= listing.price %></span></div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="grid padding-free">
+                                        <button type="submit" class="submit-btn">Book</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="cell column-6">
+                <p>Listing ID: <%= listing.id %></p>
+                <p>Listing Type: <%= listing.type %></p>
+                <p>Listing Title: <%= listing.title %></p>
+                <p>Listing ID: <%= listing.id %></p>
+                <p>Listing Type: <%= listing.type %></p>
+                <p>Listing Title: <%= listing.title %></p>
+                <p>Listing ID: <%= listing.id %></p>
+                <p>Listing Type: <%= listing.type %></p>
+                <p>Listing Title: <%= listing.title %></p>
+                <p>Listing ID: <%= listing.id %></p>
+                <p>Listing Type: <%= listing.type %></p>
+                <p>Listing Title: <%= listing.title %></p>
+                <p>Listing ID: <%= listing.id %></p>
+                <p>Listing Type: <%= listing.type %></p>
+                <p>Listing Title: <%= listing.title %></p>
+                <p>Listing ID: <%= listing.id %></p>
+                <p>Listing Type: <%= listing.type %></p>
+                <p>Listing Title: <%= listing.title %></p>
+                <p>Listing ID: <%= listing.id %></p>
+                <p>Listing Type: <%= listing.type %></p>
+                <p>Listing Title: <%= listing.title %></p>
+                <p>Listing ID: <%= listing.id %></p>
+                <p>Listing Type: <%= listing.type %></p>
+                <p>Listing Title: <%= listing.title %></p>
+                <p>Listing ID: <%= listing.id %></p>
+                <p>Listing Type: <%= listing.type %></p>
+                <p>Listing Title: <%= listing.title %></p>
+                <p>Listing ID: <%= listing.id %></p>
+                <p>Listing Type: <%= listing.type %></p>
+                <p>Listing Title: <%= listing.title %></p>
+                <p>Listing ID: <%= listing.id %></p>
+                <p>Listing Type: <%= listing.type %></p>
+                <p>Listing Title: <%= listing.title %></p>
+                <p>Listing ID: <%= listing.id %></p>
+                <p>Listing Type: <%= listing.type %></p>
+                <p>Listing Title: <%= listing.title %></p>
+                <p>Listing ID: <%= listing.id %></p>
+                <p>Listing Type: <%= listing.type %></p>
+                <p>Listing Title: <%= listing.title %></p>
+                <p>Listing ID: <%= listing.id %></p>
+                <p>Listing Type: <%= listing.type %></p>
+                <p>Listing Title: <%= listing.title %></p>
+                <p>Listing ID: <%= listing.id %></p>
+                <p>Listing Type: <%= listing.type %></p>
+                <p>Listing Title: <%= listing.title %></p>
+                <p>Listing ID: <%= listing.id %></p>
+                <p>Listing Type: <%= listing.type %></p>
+                <p>Listing Title: <%= listing.title %></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="">
+        <h2>abas gholi kojaE</h2>
+        <h2>abas gholi kojaE</h2>
+        <h2>abas gholi kojaE</h2>
+        <h2>abas gholi kojaE</h2>
+        <h2>abas gholi kojaE</h2>
+        <h2>abas gholi kojaE</h2>
+        <h2>abas gholi kojaE</h2>
+        <h2>abas gholi kojaE</h2>
+        <h2>abas gholi kojaE</h2>
+        <h2>abas gholi kojaE</h2>
+        <h2>abas gholi kojaE</h2>
+        <h2>abas gholi kojaE</h2>
+        <h2>abas gholi kojaE</h2>
+        <h2>abas gholi kojaE</h2>
+        <h2>abas gholi kojaE</h2>
+        <h2>abas gholi kojaE</h2>
+        <h2>abas gholi kojaE</h2>
+        <h2>abas gholi kojaE</h2>
+        <h2>abas gholi kojaE</h2>
+        <h2>abas gholi kojaE</h2>
+        <h2>abas gholi kojaE</h2>
+        <h2>abas gholi kojaE</h2>
+        <h2>abas gholi kojaE</h2>
+        <h2>abas gholi kojaE</h2>
+        <h2>abas gholi kojaE</h2>
+        <h2>abas gholi kojaE</h2>
+        <h2>abas gholi kojaE</h2>
+        <h2>abas gholi kojaE</h2>
+        <h2>abas gholi kojaE</h2>
+        <h2>abas gholi kojaE</h2>
+    </div>
 
 
+    <div class="booking-container">Booking here</div>
 
 
 </body>
