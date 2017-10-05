@@ -42,27 +42,49 @@ body {
 .padding-free {
     padding: 0 !important;
 }
+.waste {
+    display: none;
+    height: 50px;
+    border-bottom: 1px solid #dcdcdc;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 4;
+}
+
+.responsive-container {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .column-6, .column-4 {
     width: 100%;
-    /*border: 1px solid red;*/
-}
-
-.column-6 {
-    padding: 10px;
 }
 
 .column-4 {
     position: relative;
     display: block;
+    background-color: #fff;
 }
 .newcol {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    border: solid 1px #dcdcdc;
-    height: 330px;
+    height: 380px;
     width: 100%;
+}
+.form {
+    border: solid 1px #dcdcdc;
+    border-top: none;
+}
+.gap {
+    height: 49px;
+    border-bottom: 1px solid #dcdcdc;
+    border-top: 1px solid transparent;
+    background-color: #fff;
 }
 .stick-bottom {
     position: absolute;
@@ -72,14 +94,53 @@ body {
 .column-4--fixed {
     position: fixed;
     top: 0;
+}
+
+
+
+.innercol {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    /*border:1px solid red;*/
+    /*background-color: red;*/
+}
+
+.header {
+    height: 50px;
+    width: 100%;
+    border-bottom: 1px solid #dcdcdc;
+    margin-bottom: 8px;
+    background-color: #fff;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
     z-index: 5;
 }
 
-.responsive-container {
-    /*position: relative;*/
-    width: auto;
-    margin-left: auto;
-    margin-right: auto;
+.rest {
+    padding: 0 20px 20px 20px;
+}
+
+.innercol-row {
+    border:1px solid blue;
+    padding: 8px 11px;
+}
+
+.innercol-row .listing-title {
+    display: block;
+    color: #484848;
+    font-weight: bold;
+    font-size: 34px;
+}
+.innercol-row .listing-location {
+    display: block;
+    color: #767676;
+    padding: 8px 0;
+    font-size: 18px;
 }
 
 .booking-container {
@@ -98,6 +159,7 @@ body {
 
 
 .listing-images {
+    position: relative;
     background-color: #933ec5;
     background-repeat: no-repeat !important;
     background-size: cover !important;
@@ -163,6 +225,7 @@ body {
 .submit-btn {
     background-color: #fd5c63;
     padding: 12px 21px !important;
+    margin-bottom: 8px;
     color: #fff;
     width: 100%;
     border-radius: 3px;

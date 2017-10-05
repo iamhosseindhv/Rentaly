@@ -23,16 +23,17 @@
 
     <% include ./partials/header.html %>
 
-    <!--<div class="cell listing-images" style="background-image: url(<%= listing.thumbnail_img %>)">-->
-    <div class="cell listing-images" style="background-image: url('/images/owl.jpg')">
+    <!--<div class="cell listing-images" style="background-image: url(<%= listing.thumbnail_img %>)"></div>-->
+    <div class="cell listing-images" style="background-image: url('/images/owl.jpg')"></div>
 
-    </div>
+    <div class="waste"></div>
 
     <div class="responsive-container">
         <div class="grid padding-free">
             <div class="cell column-4">
                 <div class="newcol">
-                    <div class="grid">
+                    <div class="gap"></div>
+                    <div class="form grid">
                         <form id="my-form" method="post" action="/booking">
                             <div class="content">
                                 <div class="form-row">
@@ -69,54 +70,43 @@
                 </div>
             </div>
             <div class="cell column-6">
-                <p>Listing ID: <%= listing.id %></p>
-                <p>Listing Type: <%= listing.type %></p>
-                <p>Listing Title: <%= listing.title %></p>
-                <p>Listing ID: <%= listing.id %></p>
-                <p>Listing Type: <%= listing.type %></p>
-                <p>Listing Title: <%= listing.title %></p>
-                <p>Listing ID: <%= listing.id %></p>
-                <p>Listing Type: <%= listing.type %></p>
-                <p>Listing Title: <%= listing.title %></p>
-                <p>Listing ID: <%= listing.id %></p>
-                <p>Listing Type: <%= listing.type %></p>
-                <p>Listing Title: <%= listing.title %></p>
-                <p>Listing ID: <%= listing.id %></p>
-                <p>Listing Type: <%= listing.type %></p>
-                <p>Listing Title: <%= listing.title %></p>
-                <p>Listing ID: <%= listing.id %></p>
-                <p>Listing Type: <%= listing.type %></p>
-                <p>Listing Title: <%= listing.title %></p>
-                <p>Listing ID: <%= listing.id %></p>
-                <p>Listing Type: <%= listing.type %></p>
-                <p>Listing Title: <%= listing.title %></p>
-                <p>Listing ID: <%= listing.id %></p>
-                <p>Listing Type: <%= listing.type %></p>
-                <p>Listing Title: <%= listing.title %></p>
-                <p>Listing ID: <%= listing.id %></p>
-                <p>Listing Type: <%= listing.type %></p>
-                <p>Listing Title: <%= listing.title %></p>
-                <p>Listing ID: <%= listing.id %></p>
-                <p>Listing Type: <%= listing.type %></p>
-                <p>Listing Title: <%= listing.title %></p>
-                <p>Listing ID: <%= listing.id %></p>
-                <p>Listing Type: <%= listing.type %></p>
-                <p>Listing Title: <%= listing.title %></p>
-                <p>Listing ID: <%= listing.id %></p>
-                <p>Listing Type: <%= listing.type %></p>
-                <p>Listing Title: <%= listing.title %></p>
-                <p>Listing ID: <%= listing.id %></p>
-                <p>Listing Type: <%= listing.type %></p>
-                <p>Listing Title: <%= listing.title %></p>
-                <p>Listing ID: <%= listing.id %></p>
-                <p>Listing Type: <%= listing.type %></p>
-                <p>Listing Title: <%= listing.title %></p>
-                <p>Listing ID: <%= listing.id %></p>
-                <p>Listing Type: <%= listing.type %></p>
-                <p>Listing Title: <%= listing.title %></p>
-                <p>Listing ID: <%= listing.id %></p>
-                <p>Listing Type: <%= listing.type %></p>
-                <p>Listing Title: <%= listing.title %></p>
+                <div class="innercol">
+                    <div class="header">header stuff goes here</div>
+                    <div class="rest">
+                        <div class="innercol-row">
+                            <span class="listing-title"><%= listing.title %></span>
+                            <span class="listing-location"><%= listing.location %></span>
+                        </div>
+                        <div class="innercol-row">
+
+
+                        </div>
+
+                        <p>Listing ID: <%= listing.id %></p>
+                        <p>Listing Type: <%= listing.type %></p>
+                        <p>Listing Title: <%= listing.title %></p>
+                        <p>Listing ID: <%= listing.id %></p>
+                        <p>Listing Type: <%= listing.type %></p>
+                        <p>Listing Title: <%= listing.title %></p>
+                        <p>Listing ID: <%= listing.id %></p>
+                        <p>Listing Type: <%= listing.type %></p>
+                        <p>Listing Title: <%= listing.title %></p>
+                        <p>Listing ID: <%= listing.id %></p>
+                        <p>Listing Type: <%= listing.type %></p>
+                        <p>Listing Title: <%= listing.title %></p>
+                        <p>Listing ID: <%= listing.id %></p>
+                        <p>Listing Type: <%= listing.type %></p>
+                        <p>Listing ID: <%= listing.id %></p>
+                        <p>Listing Type: <%= listing.type %></p>
+                        <p>Listing Title: <%= listing.title %></p>
+                        <p>Listing ID: <%= listing.id %></p>
+                        <p>Listing Type: <%= listing.type %></p>
+                        <p>Listing Title: <%= listing.title %></p>
+                        <p>Listing ID: <%= listing.id %></p>
+                        <p>Listing Type: <%= listing.type %></p>
+                        <p>Listing Title: <%= listing.title %></p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
