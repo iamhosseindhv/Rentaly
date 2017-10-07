@@ -10,6 +10,9 @@ $(document).ready(function () {
     const column4Height = column4.height();
     const windowWidth = window.innerWidth;
 
+    $(document).on('scroll', onScroll);
+
+
     $(document).scroll(function () {
         var newcolOffset = newcol.offset().top + newcolHeight;
         var column4Offset = column4.offset().top + column4Height;
@@ -43,8 +46,12 @@ $(document).ready(function () {
         }
     });
 
+    //when listing navbar item clicked
+    $('.header a').click(function() {
+        scrollToId(this);
+    });
 
-
+    //date picker stuff
     const customOptions = {
         placeholder: "روز / ماه / سال",
         twodigit: true,
@@ -64,13 +71,110 @@ $(document).ready(function () {
 
 function fixListingHeader() {
     $('.waste').css('display', 'block');
-    $('.header').addClass("fixed");
+    $('.header').addClass('fixed');
     $('.rest').css('padding-top', '58px');
 }
 
 function unfixListingHeader() {
     $('.waste').css('display', 'none');
-    $('.header').removeClass("fixed");
+    $('.header').removeClass('fixed');
     $('.rest').css('padding-top', '0');
 }
 
+
+function scrollToId(self) {
+    const goTo = $(self).attr('href');
+    const id = $(self).attr('id');
+    // Desired offset, in pixels
+    const offset = $('.header').height() + 25;
+    const scrollTime = 500;
+    if (goTo === '#details'){
+        $('html, body').animate({
+            scrollTop: $(goTo).offset().top - offset + 18
+        }, scrollTime);
+    } else {
+        $('html, body').animate({
+            scrollTop: $(goTo).offset().top - offset
+        }, scrollTime);
+    }
+    activateLink(id);
+}
+
+function activateLink(id) {
+    $('.header-main a.active').removeClass('active');
+    $('#' + id).addClass('active');
+}
+
+
+var inview = [];
+var prevView = 0;
+var currentView = 0;
+function onScroll(){
+    inview = [];
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    prevView = currentView;
+    currentView = docViewTop;
+
+
+    var detailTop = $('#details').offset().top;
+    var detailBottom = detailTop + $('#details').height();
+    var hostTop = $('#host').offset().top;
+    var hostBottom = hostTop + $('#host').height();
+    var reviewTop = $('#reviews').offset().top;
+    var reviewBottom = reviewTop + $('#reviews').height();
+    var locationTop = $('#location').offset().top;
+    var locationBottom = locationTop + $('#location').height();
+
+    if ((detailBottom <= docViewBottom) && (detailTop >= docViewTop)) {
+        inview.push('first-link');
+    }
+    if ((hostBottom <= docViewBottom) && (hostTop >= docViewTop)) {
+        inview.push('second-link');
+    }
+    if ((reviewBottom <= docViewBottom) && (reviewTop >= docViewTop)) {
+        inview.push('third-link');
+    }
+    if ((locationBottom <= docViewBottom) && (locationTop >= docViewTop)) {
+        inview.push('fourth-link');
+    }
+    activateLink(inview[0]);
+    // console.log(inview);
+}
+
+
+var map;
+function initMap() {
+    var styles = {
+        hide: [{
+            featureType: 'poi.business',
+            stylers: [{visibility: 'off'}]
+        },
+            {
+                featureType: 'transit',
+                elementType: 'labels.icon',
+                stylers: [{visibility: 'off'}]
+            }
+        ]
+    };
+
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: 35.6891975, lng: 51.3889735},
+        zoom: 10,
+        mapTypeId: 'roadmap',
+        disableDefaultUI: true,
+        fullscreenControl: false,
+        mapTypeControl: true,
+        mapTypeControlOptions: {
+            style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+            mapTypeIds: ['roadmap','satellite'],
+            position: google.maps.ControlPosition.RIGHT_BOTTOM
+        },
+        zoomControl: true,
+        zoomControlOptions: {
+            position: google.maps.ControlPosition.RIGHT_TOP
+        }
+    });
+    map.setOptions({styles: styles['hide']});
+}

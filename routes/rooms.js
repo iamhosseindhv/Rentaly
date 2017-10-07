@@ -38,8 +38,13 @@ var findListing = function (id, properties, callback) {
               properties.listing = null;
           } else {
               properties.listing = results[0];
+              db.query('SELECT * FROM users WHERE id = ?', [results[0].user_id], function (error, host) {
+                   if (host[0]){
+                        properties.host = host[0];
+                   }
+                  callback(properties);
+              });
           }
-          callback(properties);
      });
 };
 
