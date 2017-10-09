@@ -45,8 +45,14 @@ body {
 .margin-free {
     margin: 0 !important;
 }
+.relative-positioned {
+    position: relative;
+}
 .waste {
+    /*transition: opacity 0.3s ease-in-out;*/
     display: none;
+    /*display: block;*/
+    /*opacity: 0;*/
     height: 50px;
     border-bottom: 1px solid #dcdcdc;
     background-color: #fff;
@@ -55,6 +61,25 @@ body {
     left: 0;
     width: 100%;
     z-index: 4;
+}
+.listing-scroll-summary {
+    height: 50px;
+    display: none;
+    width: 40%;
+}
+.listing-scroll-summary--inner {
+    box-sizing: border-box;
+    height: 50px;
+    overflow: hidden;
+    background-color: #484848;
+    color: #fff;
+    padding: 15px 20px 0 20px;
+    /*padding-left: 20px;*/
+    /*-webkit-transition: padding-top .3s , background-color .3s .05s;*/
+    /*-moz-transition: padding-top .3s, background-color .3s .05s;*/
+    /*-ms-transition: padding-top .3s, background-color .3s .05s;*/
+    /*-o-transition: padding-top .3s, background-color .3s .05s;*/
+    transition: padding-top .3s, background-color .3s 0.05s;
 }
 
 .listing-images {
@@ -121,11 +146,10 @@ body {
     width: 100%;
     border-bottom: 1px solid #dcdcdc;
     margin-bottom: 8px;
-    background-color: #fff;
+    /*background-color: #fff;*/
 }
 .header-main {
     box-sizing: border-box;
-    /*background-color: blue;*/
     padding-left: 8px;
     height: 50px;
     overflow: hidden;
@@ -152,7 +176,7 @@ body {
 .active {
     color: #727272 !important;
     font-weight: bold;
-    border-bottom-color: #933ec5 !important;
+    border-bottom-color: #ad974f !important;
 }
 
 
@@ -301,13 +325,26 @@ body {
 .map-container {
     position:relative;
     width: 100%;
-    margin-top: 40px;
+    margin-top: 50px;
     padding-top: 12px;
     border-top: 1px solid #dcdcdc;
 }
 .map {
     height: 400px;
 }
+
+
+.footer {
+    background: url('https://www.imageupload.co.uk/images/2017/10/09/bg-1.png') right bottom no-repeat;
+    background-size: 75%;
+    box-sizing: border-box;
+    margin-top: 50px;
+    border-top: 1px solid #dcdcdc;
+    height: inherit;
+}
+
+
+
 .booking-container {
     position: fixed;
     display: none;
@@ -319,7 +356,7 @@ body {
     text-align: center;
     line-height: 55px;
     color: #fff;
-    background-color: #933ec5;
+    background-color: #ad974f;
 }
 
 /*booking area form*/
@@ -363,13 +400,13 @@ body {
     color: rgb(118, 118, 118);
 }
 .form-description {
-    color: #666;
+    color: #484848;
     margin-bottom: 4px;
     font-size: 17px;
     white-space: normal;
 }
 .submit-btn {
-    background-color: #fd5c63;
+    background-color: #ad974f;
     padding: 12px 21px !important;
     margin-bottom: 8px;
     color: #fff;
@@ -385,7 +422,6 @@ body {
     display: inline-block;
     width: 50%;
 }
-
 
 
 @media (min-width: 560px){
@@ -429,6 +465,11 @@ body {
     .responsive-container {
         width: 696px;
     }
+    .listing-scroll-summary {
+        position: absolute;
+        display: block;
+        right: 20px;
+    }
     .header-main {
         max-width: 656px;
     }
@@ -447,6 +488,15 @@ body {
 @media (min-width: 1128px){
     .responsive-container {
         width: 1080px;
+    }
+    .listing-scroll-summary {
+        position: relative;
+        display: block;
+        right: 0;
+    }
+    .listing-scroll-summary--inner {
+        padding-top: 50px;
+        background-color: #fff;
     }
     .header-main {
         max-width: 648px;

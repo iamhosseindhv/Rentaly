@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e0a3734b-614c-465a-ada2-ad49b70c8263" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/rooms.js" afterPath="$PROJECT_DIR$/public/javascripts/rooms.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/rooms.css" afterPath="$PROJECT_DIR$/public/stylesheets/rooms.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/rooms.ejs" afterPath="$PROJECT_DIR$/views/rooms.ejs" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -18,22 +20,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="rooms.ejs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="rooms.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/rooms.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="451">
-              <caret line="80" column="20" lean-forward="true" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="20" />
+            <state relative-caret-position="155">
+              <caret line="33" column="39" lean-forward="false" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#span#4;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#div#2;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#span#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#div#0;n#div#1;n#div#1;n#div#0;n#div#2;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#span#4;n#div#0;n#div#1;n#div#1;n#div#0;n#div#2;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -47,42 +48,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rooms.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="rooms.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/rooms.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="132" column="13" lean-forward="true" selection-start-line="132" selection-start-column="13" selection-end-line="132" selection-end-column="13" />
+            <state relative-caret-position="300">
+              <caret line="20" column="17" lean-forward="true" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
               <folding>
-                <element signature="e#3471#3498#0" expanded="false" />
-                <element signature="e#3533#3600#0" expanded="false" />
-                <element signature="e#3650#3714#0" expanded="false" />
-                <element signature="e#3775#3805#0" expanded="false" />
-                <element signature="e#3833#4018#0" expanded="false" />
-                <element signature="e#4042#4068#0" expanded="false" />
-                <element signature="e#4228#4252#0" expanded="false" />
-                <element signature="e#4276#4331#0" expanded="false" />
-                <element signature="e#4352#4618#0" expanded="false" />
-                <element signature="e#4662#4716#0" expanded="false" />
-                <element signature="e#4738#4873#0" expanded="false" />
-                <element signature="e#4901#4972#0" expanded="false" />
-                <element signature="e#4991#5070#0" expanded="false" />
-                <element signature="e#5091#5294#0" expanded="false" />
-                <element signature="e#5314#5528#0" expanded="false" />
-                <element signature="e#5559#5606#0" expanded="false" />
-                <element signature="e#5630#5709#0" expanded="false" />
-                <element signature="e#5744#5849#0" expanded="false" />
-                <element signature="e#6038#6252#0" expanded="false" />
-                <element signature="e#6285#6305#0" expanded="false" />
-                <element signature="e#6315#6432#0" expanded="false" />
-                <element signature="e#6464#6487#0" expanded="false" />
-                <element signature="e#6518#6541#0" expanded="false" />
-                <element signature="e#6552#6665#0" expanded="false" />
-                <element signature="e#6685#6719#0" expanded="false" />
-                <element signature="e#6733#6958#0" expanded="false" />
-                <element signature="e#6985#7019#0" expanded="false" />
-                <element signature="e#7038#7128#0" expanded="false" />
-                <element signature="e#7141#7394#0" expanded="false" />
-                <element signature="e#7407#7453#0" expanded="false" />
+                <element signature="e#4211#4238#0" expanded="false" />
+                <element signature="e#4273#4340#0" expanded="false" />
+                <element signature="e#4390#4454#0" expanded="false" />
+                <element signature="e#4515#4545#0" expanded="false" />
+                <element signature="e#4573#4758#0" expanded="false" />
+                <element signature="e#4782#4808#0" expanded="false" />
+                <element signature="e#4968#4992#0" expanded="false" />
+                <element signature="e#5016#5071#0" expanded="false" />
+                <element signature="e#5092#5358#0" expanded="false" />
+                <element signature="e#5402#5456#0" expanded="false" />
+                <element signature="e#5478#5613#0" expanded="false" />
+                <element signature="e#5641#5712#0" expanded="false" />
+                <element signature="e#5731#5810#0" expanded="false" />
+                <element signature="e#5831#6034#0" expanded="false" />
+                <element signature="e#6054#6268#0" expanded="false" />
+                <element signature="e#6299#6346#0" expanded="false" />
+                <element signature="e#6370#6449#0" expanded="false" />
+                <element signature="e#6484#6589#0" expanded="false" />
+                <element signature="e#7278#7298#0" expanded="false" />
+                <element signature="e#7308#7425#0" expanded="false" />
+                <element signature="e#7457#7480#0" expanded="false" />
+                <element signature="e#7511#7534#0" expanded="false" />
+                <element signature="e#7545#7658#0" expanded="false" />
+                <element signature="e#7678#7712#0" expanded="false" />
+                <element signature="e#7726#7951#0" expanded="false" />
+                <element signature="e#7978#8012#0" expanded="false" />
+                <element signature="e#8031#8124#0" expanded="false" />
+                <element signature="e#8137#8390#0" expanded="false" />
+                <element signature="e#8403#8449#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -91,10 +91,10 @@
       <file leaf-file-name="rooms.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/javascripts/rooms.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="795">
-              <caret line="53" column="23" lean-forward="false" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
+            <state relative-caret-position="264">
+              <caret line="35" column="65" lean-forward="false" selection-start-line="35" selection-start-column="65" selection-end-line="35" selection-end-column="65" />
               <folding>
-                <element signature="e#1982#2281#0" expanded="false" />
+                <element signature="e#2221#2520#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -199,8 +199,8 @@
         <option value="$PROJECT_DIR$/public/stylesheets/newListing.css" />
         <option value="$PROJECT_DIR$/views/newListing.ejs" />
         <option value="$PROJECT_DIR$/routes/rooms.js" />
-        <option value="$PROJECT_DIR$/public/stylesheets/rooms.css" />
         <option value="$PROJECT_DIR$/public/javascripts/rooms.js" />
+        <option value="$PROJECT_DIR$/public/stylesheets/rooms.css" />
         <option value="$PROJECT_DIR$/views/rooms.ejs" />
       </list>
     </option>
@@ -641,7 +641,7 @@
       <workItem from="1505804446332" duration="391000" />
       <workItem from="1505945957902" duration="353000" />
       <workItem from="1506537121554" duration="50733000" />
-      <workItem from="1507186266345" duration="54326000" />
+      <workItem from="1507186266345" duration="70736000" />
     </task>
     <task id="LOCAL-00001" summary="improved">
       <created>1504902264476</created>
@@ -783,11 +783,18 @@
       <option name="project" value="LOCAL" />
       <updated>1507415586952</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="bug fixed">
+      <created>1507415791913</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1507415791913</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="447083000" />
+    <option name="totallyTimeSpent" value="463493000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -797,7 +804,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19654715" sideWeight="0.50625" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934928" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19654715" sideWeight="0.49375" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19654715" sideWeight="0.49375" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934928" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -832,12 +839,12 @@
     <MESSAGE value="new listing page completed" />
     <MESSAGE value="responsiveness bug fixed" />
     <MESSAGE value="improvement made" />
-    <MESSAGE value="bug fixed" />
     <MESSAGE value="improved" />
     <MESSAGE value="page template completed - booking form added" />
     <MESSAGE value="responsiveness of template DONE" />
     <MESSAGE value="HUGE improvements made" />
-    <option name="LAST_COMMIT_MESSAGE" value="HUGE improvements made" />
+    <MESSAGE value="bug fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fixed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1165,55 +1172,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/rooms.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
-          <caret line="53" column="23" lean-forward="false" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
-          <folding>
-            <element signature="e#1982#2281#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/rooms.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="132" column="13" lean-forward="true" selection-start-line="132" selection-start-column="13" selection-end-line="132" selection-end-column="13" />
-          <folding>
-            <element signature="e#3471#3498#0" expanded="false" />
-            <element signature="e#3533#3600#0" expanded="false" />
-            <element signature="e#3650#3714#0" expanded="false" />
-            <element signature="e#3775#3805#0" expanded="false" />
-            <element signature="e#3833#4018#0" expanded="false" />
-            <element signature="e#4042#4068#0" expanded="false" />
-            <element signature="e#4228#4252#0" expanded="false" />
-            <element signature="e#4276#4331#0" expanded="false" />
-            <element signature="e#4352#4618#0" expanded="false" />
-            <element signature="e#4662#4716#0" expanded="false" />
-            <element signature="e#4738#4873#0" expanded="false" />
-            <element signature="e#4901#4972#0" expanded="false" />
-            <element signature="e#4991#5070#0" expanded="false" />
-            <element signature="e#5091#5294#0" expanded="false" />
-            <element signature="e#5314#5528#0" expanded="false" />
-            <element signature="e#5559#5606#0" expanded="false" />
-            <element signature="e#5630#5709#0" expanded="false" />
-            <element signature="e#5744#5849#0" expanded="false" />
-            <element signature="e#6038#6252#0" expanded="false" />
-            <element signature="e#6285#6305#0" expanded="false" />
-            <element signature="e#6315#6432#0" expanded="false" />
-            <element signature="e#6464#6487#0" expanded="false" />
-            <element signature="e#6518#6541#0" expanded="false" />
-            <element signature="e#6552#6665#0" expanded="false" />
-            <element signature="e#6685#6719#0" expanded="false" />
-            <element signature="e#6733#6958#0" expanded="false" />
-            <element signature="e#6985#7019#0" expanded="false" />
-            <element signature="e#7038#7128#0" expanded="false" />
-            <element signature="e#7141#7394#0" expanded="false" />
-            <element signature="e#7407#7453#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/searchResult.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-402">
@@ -1222,21 +1180,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/rooms.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="35" column="65" lean-forward="false" selection-start-line="35" selection-start-column="65" selection-end-line="35" selection-end-column="65" />
+          <folding>
+            <element signature="e#2221#2520#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/rooms.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="80" column="20" lean-forward="true" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="20" />
+        <state relative-caret-position="155">
+          <caret line="33" column="39" lean-forward="false" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#span#4;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#div#2;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#span#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#div#0;n#div#1;n#div#1;n#div#0;n#div#2;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#span#4;n#div#0;n#div#1;n#div#1;n#div#0;n#div#2;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1245,6 +1212,44 @@
             <element signature="n#div#0;n#div#3;n#div#1;n#div#0;n#div#2;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#span#4;n#div#0;n#div#3;n#div#1;n#div#0;n#div#2;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/rooms.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="17" lean-forward="true" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+          <folding>
+            <element signature="e#4211#4238#0" expanded="false" />
+            <element signature="e#4273#4340#0" expanded="false" />
+            <element signature="e#4390#4454#0" expanded="false" />
+            <element signature="e#4515#4545#0" expanded="false" />
+            <element signature="e#4573#4758#0" expanded="false" />
+            <element signature="e#4782#4808#0" expanded="false" />
+            <element signature="e#4968#4992#0" expanded="false" />
+            <element signature="e#5016#5071#0" expanded="false" />
+            <element signature="e#5092#5358#0" expanded="false" />
+            <element signature="e#5402#5456#0" expanded="false" />
+            <element signature="e#5478#5613#0" expanded="false" />
+            <element signature="e#5641#5712#0" expanded="false" />
+            <element signature="e#5731#5810#0" expanded="false" />
+            <element signature="e#5831#6034#0" expanded="false" />
+            <element signature="e#6054#6268#0" expanded="false" />
+            <element signature="e#6299#6346#0" expanded="false" />
+            <element signature="e#6370#6449#0" expanded="false" />
+            <element signature="e#6484#6589#0" expanded="false" />
+            <element signature="e#7278#7298#0" expanded="false" />
+            <element signature="e#7308#7425#0" expanded="false" />
+            <element signature="e#7457#7480#0" expanded="false" />
+            <element signature="e#7511#7534#0" expanded="false" />
+            <element signature="e#7545#7658#0" expanded="false" />
+            <element signature="e#7678#7712#0" expanded="false" />
+            <element signature="e#7726#7951#0" expanded="false" />
+            <element signature="e#7978#8012#0" expanded="false" />
+            <element signature="e#8031#8124#0" expanded="false" />
+            <element signature="e#8137#8390#0" expanded="false" />
+            <element signature="e#8403#8449#0" expanded="false" />
           </folding>
         </state>
       </provider>

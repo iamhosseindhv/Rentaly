@@ -5,6 +5,7 @@ $(document).ready(function () {
     const newcol = $('.newcol');
     const column4 = $('.column-4');
     const column6Header = $('.column-6-header');
+    const listingScrollSummary = $('.listing-scroll-summary--inner');
     const imageHeight = $('.listing-images').height() + $('.top-head').height();
     const newcolHeight = newcol.outerHeight();
     const column4Height = column4.height();
@@ -32,11 +33,12 @@ $(document).ready(function () {
                 } else {
                     newcol.removeClass("column-4--fixed");
                     newcol.addClass('stick-bottom');
-                    // alert('passed');
+                    listingScrollSummary.css('padding-top', '15px').css('background-color', '#484848');
                     const windowScroll = $(window).scrollTop() + newcolHeight;
                     if (newcolOffset > windowScroll) {
                         newcol.removeClass('stick-bottom');
                         newcol.addClass("column-4--fixed");
+                        listingScrollSummary.css('padding-top', '50px').css('background-color', '#fff');
                     }
                 }
             } else {
@@ -71,12 +73,14 @@ $(document).ready(function () {
 
 function fixListingHeader() {
     $('.waste').css('display', 'block');
+    // $('.waste').css('opacity', '1');
     $('.header').addClass('fixed');
     $('.rest').css('padding-top', '58px');
 }
 
 function unfixListingHeader() {
     $('.waste').css('display', 'none');
+    // $('.waste').css('opacity', '0');
     $('.header').removeClass('fixed');
     $('.rest').css('padding-top', '0');
 }
