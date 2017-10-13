@@ -29,7 +29,7 @@ body {
 }
 .box {
     position: relative;
-    padding-top: 66.66%; /* 3:2 Aspect Ratio */
+    padding-top: 75%;
     width: 100%;
 }
 .marginless {
@@ -49,10 +49,7 @@ body {
     position: relative;
 }
 .waste {
-    /*transition: opacity 0.3s ease-in-out;*/
     display: none;
-    /*display: block;*/
-    /*opacity: 0;*/
     height: 50px;
     border-bottom: 1px solid #dcdcdc;
     background-color: #fff;
@@ -71,15 +68,22 @@ body {
     box-sizing: border-box;
     height: 50px;
     overflow: hidden;
-    background-color: #484848;
+    background-color: #595959;
     color: #fff;
-    padding: 15px 20px 0 20px;
-    /*padding-left: 20px;*/
-    /*-webkit-transition: padding-top .3s , background-color .3s .05s;*/
-    /*-moz-transition: padding-top .3s, background-color .3s .05s;*/
-    /*-ms-transition: padding-top .3s, background-color .3s .05s;*/
-    /*-o-transition: padding-top .3s, background-color .3s .05s;*/
+    padding: 0 20px;
+    -webkit-transition: padding-top .3s , background-color .3s .05s;
+    -moz-transition: padding-top .3s, background-color .3s .05s;
+    -ms-transition: padding-top .3s, background-color .3s .05s;
+    -o-transition: padding-top .3s, background-color .3s .05s;
     transition: padding-top .3s, background-color .3s 0.05s;
+}
+.listing-scroll-summary--inner span:first-child {
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.listing-scroll-summary--inner span:nth-child(2) {
+    font-size: 14px;
 }
 
 .listing-images {
@@ -197,6 +201,8 @@ body {
     padding: 8px 11px;
     margin-bottom: 40px;
     color: #484848;
+    font-size: 16px;
+    line-height: 20px;
 }
 .border-free {
     border: none;
@@ -217,9 +223,9 @@ body {
     font-weight: bold;
     font-size: 34px;
 }
-.listing-location, .listing-hostregistrationdate {
+.listing-location {
     color: #767676;
-    padding: 8px 0;
+    margin: 12px 0;
     font-size: 18px;
 }
 .listing-stars, .listing-overallreview, .listing-hostavatar {
@@ -236,13 +242,34 @@ body {
 .listing-overallreview {
     padding: 8px 21px;
 }
-
-.innercol--properties {
+.listing-properties {
+    position: relative;
+    box-sizing: border-box;
     display: inline-block;
-    background-color: #ededed;
-    width: calc(50% - 4px);
-    margin-bottom: 4px;
+    padding: 8px 11px;
+    width: calc(100% - 4px);
+    height: 100%;
 }
+.listing-properties:last-child {
+    border: none;
+    padding-bottom: 11px;
+}
+.listing-properties-title {
+    vertical-align: bottom;
+    display: inline-block;
+    margin-left: 16px;
+    color: #484848;
+    font-size: 15px;
+    line-height: 32px;
+}
+.listing-properties-img {
+    display: inline-block;
+    width: 32px;
+}
+.listing-properties-img img {
+    max-width: 100%;
+}
+
 
 .listing-description {
     margin-top: 8px;
@@ -251,6 +278,13 @@ body {
 .innercol--hostavatar {
     box-sizing: border-box;
     text-align: center;
+}
+.listing-hostname {
+    line-height: normal;
+}
+.listing-hostregistrationdate {
+    color: #767676;
+    font-size: 15px;
 }
 .listing-hostavatar {
     background-repeat: no-repeat !important;
@@ -270,12 +304,12 @@ body {
 .listing-hostcontact {
     background-color: #fff;
     padding: 8px 21px;
-    border: 1px solid #933ec5;
+    border: 1px solid #ad974f;
     border-radius: 3px;
     transition: all 0.3s;
 }
 .listing-hostcontact:hover {
-    background-color: rgba(147, 62, 197, 0.2);
+    background-color: rgba(173, 151, 79, 0.2);
     cursor: pointer;
 }
 
@@ -321,6 +355,17 @@ body {
     display: inline-block;
 }
 
+.comment-section {
+    /*background-color: #fd5c63;*/
+    height:600px;
+}
+.comment {
+    background-color: purple;
+    height: 100px;
+    padding: 20px 0;
+    border-bottom: 1px solid #dcdcdc;
+}
+
 
 .map-container {
     position:relative;
@@ -341,6 +386,16 @@ body {
     margin-top: 50px;
     border-top: 1px solid #dcdcdc;
     height: inherit;
+    color: #484848;
+}
+.copyright-container {
+    height: 50px;
+    border-top: 1px solid #f2f2f2;
+    background-color: #fff;
+    color: #727272;
+    font-size: 14px;
+    text-align: center;
+    line-height: 50px;
 }
 
 
@@ -440,8 +495,11 @@ body {
     .listing-stars, .listing-overallreview, .listing-hostavatar {
         display: block;
     }
-    .innercol--properties {
-        width: calc(25% - 4px);
+    .listing-properties {
+        width: calc(50% - 4px);
+    }
+    .listing-properties:nth-child(3) {
+        border: none;
     }
     .innercol--reviews {
         width: calc(50% - 4px);

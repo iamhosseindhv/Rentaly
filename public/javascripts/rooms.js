@@ -33,7 +33,7 @@ $(document).ready(function () {
                 } else {
                     newcol.removeClass("column-4--fixed");
                     newcol.addClass('stick-bottom');
-                    listingScrollSummary.css('padding-top', '15px').css('background-color', '#484848');
+                    listingScrollSummary.css('padding-top', '12px').css('background-color', '#595959');
                     const windowScroll = $(window).scrollTop() + newcolHeight;
                     if (newcolOffset > windowScroll) {
                         newcol.removeClass('stick-bottom');
@@ -164,8 +164,8 @@ function initMap() {
     };
 
     map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: 35.6891975, lng: 51.3889735},
-        zoom: 10,
+        // center: {lat: 35.6891975, lng: 51.3889735},
+        zoom: 12,
         mapTypeId: 'roadmap',
         disableDefaultUI: true,
         fullscreenControl: false,
@@ -181,4 +181,21 @@ function initMap() {
         }
     });
     map.setOptions({styles: styles['hide']});
+}
+
+function newMarker(lat, lng) {
+    const point = new google.maps.LatLng(
+        parseFloat(lat),
+        parseFloat(lng));
+    const cityCircle = new google.maps.Circle({
+        strokeColor: '#484848',
+        strokeOpacity: .8,
+        strokeWeight: 2,
+        fillColor: '#ad974f',
+        fillOpacity: .4,
+        map: map,
+        center: point,
+        radius: 3000
+    });
+    map.setCenter(point);
 }

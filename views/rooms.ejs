@@ -23,15 +23,15 @@
 
     <% include ./partials/header.html %>
 
-    <!--<div class="cell listing-images" style="background-image: url(<%= listing.thumbnail_img %>)"></div>-->
-    <div class="cell listing-images" style="background-image: url('/images/owl.jpg')"></div>
+    <div class="cell listing-images" style="background-image: url(<%= listing.thumbnail_img %>)"></div>
+    <!--<div class="cell listing-images" style="background-image: url('/images/owl.jpg')"></div>-->
 
     <div class="waste">
         <div class="responsive-container">
             <div class="grid padding-free relative-positioned">
                 <div class="cell listing-scroll-summary">
                     <div class="listing-scroll-summary--inner">
-                        Price & Summary
+                        <span>£<%= listing.price %></span> <span>per night</span>
                     </div>
                 </div>
             </div>
@@ -66,7 +66,7 @@
                                 </div>
                                 <div class="form-row">
                                     <div class="grid">
-                                        <div class="form-description"><span><b>Price: </b><%= listing.price %></span></div>
+                                        <div class="form-description"><span><b>Price: </b>£<%= listing.price %></span></div>
                                     </div>
                                 </div>
                                 <div class="form-row">
@@ -104,36 +104,49 @@
                                             <svg viewBox="0 0 1000 1000" role="presentation" focusable="false"><path d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"></path>
                                             </svg>
                                         </span>
-                                        <span class="listing-stars--individual">
+                                            <span class="listing-stars--individual">
                                             <svg viewBox="0 0 1000 1000" role="presentation" focusable="false"><path d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"></path>
                                             </svg>
                                         </span>
-                                        <span class="listing-stars--individual">
+                                            <span class="listing-stars--individual">
                                             <svg viewBox="0 0 1000 1000" role="presentation" focusable="false"><path d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"></path>
                                             </svg>
                                         </span>
-                                        <span class="listing-stars--individual">
+                                            <span class="listing-stars--individual">
                                             <svg viewBox="0 0 1000 1000" role="presentation" focusable="false"><path d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"></path>
                                             </svg>
                                         </span>
-                                        <span class="listing-stars--individual" style="color: #D8D8D8 !important;">
+                                            <span class="listing-stars--individual" style="color: #D8D8D8 !important;">
                                             <svg viewBox="0 0 1000 1000" role="presentation" focusable="false"><path d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"></path>
                                             </svg>
                                         </span>
-                                    </div>
+                                        </div>
                                     <div class="listing-overallreview">
                                         <%= listing.review_count %> Reviews
                                     </div>
                                 </div>
                             </div>
-                            <div class="innercol-row border-free">
-                                <div class="innercol--properties">Listing's</div>
-                                <div class="innercol--properties">Properties</div>
-                                <div class="innercol--properties margin-free">Goes</div>
-                                <div class="innercol--properties margin-free">Here</div>
+                            <div class="innercol-row border-free margin-free">
+                                <div class="innercol--properties">
+                                    <div class="listing-properties">
+                                        <div class="listing-properties-img"><img src="/images/listingtype.png" alt="thumbnail"></div>
+                                        <div class="listing-properties-title"><%= listing.type %></div>
+                                    </div>
+                                    <div class="listing-properties">
+                                        <div class="listing-properties-img"><img src="/images/listingmaxguest.png" alt="thumbnail"></div>
+                                        <div class="listing-properties-title"><%= listing.max_guest %> Guest</div>
+                                    </div>
+                                    <div class="listing-properties">
+                                        <div class="listing-properties-img"><img src="/images/listingbedroom.png" alt="thumbnail"></div>
+                                        <div class="listing-properties-title"><%= listing.bedroom_count %> Bedrooms</div>
+                                    </div>
+                                    <div class="listing-properties">
+                                        <div class="listing-properties-img"><img src="/images/listingbed.png" alt="thumbnail"></div>
+                                        <div class="listing-properties-title"><%= listing.bed_count %> Beds</div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="innercol-row">
-                                <div class="innercol-row-title">Description</div>
+                            <div class="innercol-row border-free">
                                 <div class="listing-description"><%= listing.description %></div>
                             </div>
                         </div>
@@ -142,7 +155,7 @@
                                 <div class="innercol-row-title">Host Info</div>
                                 <div class="innercol--hostname">
                                     <div class="listing-hostname"><%= host.firstname %> <%= host.surename %></div>
-                                    <div class="listing-hostregistrationdate"><%= host.registration_date %></div>
+                                    <div class="listing-hostregistrationdate">With us since <%= host.registration_month %> <%= host.registration_year %></div>
                                 </div>
                                 <div class="innercol--hostavatar">
                                     <div class="listing-hostavatar" style="background-image: url(<%= host.profile_img %>)"></div>
@@ -156,7 +169,7 @@
                             </div>
                         </div>
                         <div id="reviews">
-                            <div class="innercol-row padding-free">
+                            <div class="innercol-row padding-free margin-free">
                                 <div class="innercol-row-title">reviews</div>
                                 <div class="review-section">
                                     <div class="innercol--reviews">
@@ -182,7 +195,7 @@
                                         <svg viewBox="0 0 1000 1000" role="presentation" focusable="false"><path d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"></path>
                                         </svg>
                                     </span>
-                                        </div sty>
+                                        </div>
                                     </div>
                                     <div class="innercol--reviews">
                                         <span class="listing-reviews-title">Cleanliness</span>
@@ -207,7 +220,7 @@
                                         <svg viewBox="0 0 1000 1000" role="presentation" focusable="false"><path d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"></path>
                                         </svg>
                                     </span>
-                                        </div sty>
+                                        </div>
                                     </div>
                                     <div class="innercol--reviews">
                                         <span class="listing-reviews-title">Location</span>
@@ -232,7 +245,7 @@
                                         <svg viewBox="0 0 1000 1000" role="presentation" focusable="false"><path d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"></path>
                                         </svg>
                                     </span>
-                                        </div sty>
+                                        </div>
                                     </div>
                                     <div class="innercol--reviews">
                                         <span class="listing-reviews-title">Value</span>
@@ -257,7 +270,15 @@
                                         <svg viewBox="0 0 1000 1000" role="presentation" focusable="false"><path d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"></path>
                                         </svg>
                                     </span>
-                                        </div sty>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="comment-section">
+                                    <div class="comment">
+                                        dsaas
+                                    </div>
+                                    <div class="comment">
+                                        dsaas
                                     </div>
                                 </div>
                             </div>
@@ -285,12 +306,20 @@
             <h2>abas gholi kojaE</h2>
         </div>
     </div>
+    <div class="copyright-container">
+        © 2017 NodeWeb | All Right Reserved
+    </div>
 
 
     <div class="booking-container">Booking here</div>
 
 
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYmqhY-KcOz1kHrx6JlKK7QgsloTZNRp8&callback=initMap"></script>
+    <script>
+        function drawMarker() {
+            newMarker(<%= listing.latitude %>, <%= listing.longitude %>);
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYmqhY-KcOz1kHrx6JlKK7QgsloTZNRp8&callback=initMap" onload="drawMarker()"></script>
 
 </body>
 </html>

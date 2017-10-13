@@ -14,39 +14,58 @@ router.get('/:id', function(req, res, next) {
      var properties = {};
      properties.title = 'Rooms';
 
-     findListing(req.params.id, properties, function (updatedProperties) {
-          if (updatedProperties.listing){
-               res.render('rooms', updatedProperties);
-          } else {
-               res.render('error-rooms');
-          }
-     });
+     findListing(req.params.id, properties)
+         .then(findHost)
+         .then(function (updatedProperties) {
+             if (updatedProperties.listing){
+                 res.render('rooms', updatedProperties);
+             } else {
+                 res.render('error-rooms');
+             }
+         });
 });
 
 
 
+function findListing(id, properties) {
+    return new Promise(function(resolve, reject) {
+        const db = require('../database');
+        const statement = 'SELECT * FROM listing WHERE id = ?';
+        db.query(statement, [id], function (error, results) {
+            if (error) reject(error);
+            const result = results[0];
+            //there exist NO listing with the given id
+            if (!result){
+                properties.listing = null;
+                resolve(properties);
+            } else {
+                properties.listing = result;
+                db.query('SELECT * FROM comments WHERE listing_id = ?', [result.id], function (err, comments) {
+                    if (err) reject(err);
+                    properties.comments = comments;
+                    resolve(properties);
+                });
+            }
+        });
+    });
+}
 
 
-
-var findListing = function (id, properties, callback) {
-     const db = require('../database');
-     const statement = 'SELECT * FROM listing WHERE id = ?';
-     db.query(statement, [id], function (error, results) {
-          if (error) throw error;
-          //there exist NO listing with the given id
-          if (!results[0]){
-              properties.listing = null;
-          } else {
-              properties.listing = results[0];
-              db.query('SELECT * FROM users WHERE id = ?', [results[0].user_id], function (error, host) {
-                   if (host[0]){
-                        properties.host = host[0];
-                   }
-                  callback(properties);
-              });
-          }
-     });
-};
+function findHost(properties) {
+    return new Promise(function(resolve, reject) {
+        const db = require('../database');
+        const statement = 'SELECT *, ' +
+            'DATE_FORMAT(registration_date, \'%Y\') AS registration_year, ' +
+            'DATE_FORMAT(registration_date, \'%M\') AS registration_month ' +
+            'FROM users WHERE id = ?';
+        db.query(statement, [properties.listing.user_id], function (err, host) {
+            if (host[0]){
+                properties.host = host[0];
+                resolve(properties)
+            }
+        });
+    });
+}
 
 
 
