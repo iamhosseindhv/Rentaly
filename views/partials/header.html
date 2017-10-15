@@ -1,14 +1,50 @@
 
 
 <div class="top-head">
-     <ul>
-          <li class="head-li">
-               <span class="head-item" id="logout-btn">Logout</span>
-          </li>
-          <!--<li class="head-li">-->
-               <!--<span class="head-item" id="signup-btn">Sign Up</span>-->
-          <!--</li>-->
-     </ul>
+     <nav>
+          <div class="hhh">
+               <div href="/" class="responsive-logo">
+                    LOGO HERE!
+               </div>
+               <div class="menu-icon">
+                    <a id="openup" href="#">
+                         <svg viewBox="0 0 24 24" enable-background="new 0 0 24 24" width="32px" height="32px">
+                              <path d="M24,3c0-0.6-0.4-1-1-1H1C0.4,2,0,2.4,0,3v2c0,0.6,0.4,1,1,1h22c0.6,0,1-0.4,1-1V3z" fill="#484848"/>
+                              <path d="M24,11c0-0.6-0.4-1-1-1H1c-0.6,0-1,0.4-1,1v2c0,0.6,0.4,1,1,1h22c0.6,0,1-0.4,1-1V11z" fill="#484848"/>
+                              <path d="M24,19c0-0.6-0.4-1-1-1H1c-0.6,0-1,0.4-1,1v2c0,0.6,0.4,1,1,1h22c0.6,0,1-0.4,1-1V19z" fill="#484848"/>
+                         </svg>
+                    </a>
+               </div>
+          </div>
+          <ul>
+               <li class="head-li logo" id="logo">
+                    <a href="/">
+                         <span class="head-item">LOGO HERE!</span>
+                    </a>
+               </li>
+               <li class="head-li" id="logout-btn">
+                    <span class="head-item">Log out</span>
+               </li>
+               <li class="head-li" id="login-signin-btn">
+                    <span class="head-item">Login / Sign Up</span>
+               </li>
+               <li class="head-li righted profile-img" id="profile-img">
+                    <div class="profile-avatar">
+                         <img src="/images" alt="profile photo" id="profile-avatar">
+                    </div>
+               </li>
+               <li class="head-li righted" id="profile-btn">
+                    <a href="/dashboard/profile">
+                         <span class="head-item">My profile</span>
+                    </a>
+               </li>
+               <li class="head-li righted" id="rooms-btn">
+                    <a href="../dashboard/rooms">
+                         <span class="head-item">My Rooms</span>
+                    </a>
+               </li>
+          </ul>
+     </nav>
 </div>
 
 
@@ -19,25 +55,159 @@
           border-bottom: 1px solid #dce0e0;
           font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
      }
-
      .top-head ul {
           list-style: none;
           margin: 0;
+          padding: 0 40px !important;
+     }
+     .logo {
+          background-color: #ad974f;
+          color: #fff;
+          font-weight: bold;
      }
      .head-li {
           display: inline-block;
-          font-family: "HelveticaNeue-Light";
-          /*transition: all 0.3s;*/
+          transition: all 0.3s;
           font-size: 16px;
           padding: 5px 16px;
-          line-height: 50px;
-          text-decoration: none;
-          border-bottom: 1px solid transparent;
-          color: #000;
+          line-height: 48px;
+          border-bottom: 3px solid transparent;
+          color: #484848;
           cursor: pointer;
      }
      .head-li:hover {
-          color: #933ec5;
-          border-bottom: 2px solid #933ec5;
+          color: #707070;
+          border-bottom: 3px solid #ad974f;
      }
+     .head-li a {
+          text-decoration: none !important;
+          color: inherit;
+     }
+     .righted {
+          float: right;
+     }
+     .responsive-logo {
+          display: inline-block;
+          background-color: #ad974f;
+          height: 61px;
+          box-sizing: border-box;
+          font-size: 16px;
+          padding: 5px 16px;
+          line-height: 48px;
+     }
+     .menu-icon {
+          float: right;
+          display: inline-block;
+          height: 61px;
+          box-sizing: border-box;
+          font-size: 16px;
+          padding: 5px 16px;
+          line-height: 48px;
+     }
+     .menu-icon #openup {
+          display: inline-block;
+          text-transform: uppercase;
+          font-size: 12px;
+          color: #d9d9d9;
+          border-bottom: 3px solid transparent;
+          text-decoration: none;
+          padding: 8px 12px;
+          line-height: 20px;
+     }
+     .profile-img {
+          line-height: 0 !important;
+          border-color: transparent !important;
+          cursor: default !important;
+     }
+     .profile-avatar {
+          width: 45px;
+          height: 45px;
+          transition: border 0.3s;
+          border: 2px solid transparent;
+          object-fit: cover;
+          -o-object-fit: cover;
+          border-radius: 50%;
+          overflow: hidden;
+          background-color: #dcdcdc;
+     }
+     .head-li img {
+          max-width: 100%;
+          overflow: hidden;
+          width: 45px;
+          height: 45px;
+          object-fit: cover;
+          -o-object-fit: cover;
+     }
+     .profile-avatar:hover {
+          border: 2px solid #484848;
+     }
+
+     .hhh {
+          display: none;
+     }
+
+     @media (max-width: 743px){
+          .top-head nav {
+               height: auto;
+          }
+          .top-head ul {
+               padding: 0;
+               display: none;
+               height: auto;
+               width: 100%;
+          }
+          .top-head ul li {
+               background-color: #fff;
+               width: 100%;
+               z-index:9;
+               float: right;
+               position: relative;
+          }
+          #logo, #profile-img {
+               display: none;
+          }
+          .hhh {
+               display: block;
+               /*background-color: #fff;*/
+               width: 100%;
+               height: 61px;
+               position: relative;
+               z-index:9;
+          }
+     }
+
 </style>
+
+<script>
+    $('#logout-btn').click(function () {
+        $.ajax({
+            type: 'POST',
+            url: '/authenticate/logout',
+            success: function(data) {
+                //console.log(data.status);
+                location.reload();
+            },
+            error: function (data) {
+                console.log(data);
+            }
+        });
+    });
+
+    $('#login-signin-btn').click(function () {
+        $('.base-layer').css('display', 'flex');
+    });
+
+
+
+    var menu = $('nav ul');
+    $('#openup').on('click', function(e) {
+        e.preventDefault(); menu.slideToggle();
+    });
+
+    $(window).resize(function(){
+        var w = $(this).width(); if(w > 480 && menu.is(':hidden')) {
+            menu.removeAttr('style');
+        }
+    });
+    $('.open-menu').height($(window).height());
+</script>

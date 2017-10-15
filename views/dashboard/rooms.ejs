@@ -95,6 +95,18 @@
                 $('.content').css('padding-top', '0');
             }
         }
+        customiseHeader();
+        function customiseHeader() {
+            const isAuthenticated = <%= isAuthenticated %>;
+            if (isAuthenticated){
+                $('#login-signin-btn').hide();
+            } else {
+                $('#logout-btn').hide();
+                $('#rooms-btn').hide();
+                $('#profile-btn').hide();
+                $('#profile-img').hide();
+            }
+        }
     </script>
 
 </body>

@@ -12,6 +12,8 @@ router.get('/:id', function(req, res, next) {
     const listing_id = req.params.id;
     var properties = {};
     properties.title = 'Rooms';
+    properties.isAuthenticated = req.isAuthenticated;
+    properties.user = req.user;
 
     findListing(listing_id, properties)
         .then(findHost)

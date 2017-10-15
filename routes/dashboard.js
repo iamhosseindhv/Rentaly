@@ -16,6 +16,7 @@ router.get('/:tab', isAuthenticated, function(req, res) {
     var properties = {};
     properties.activeTab = activeTab;
     properties.user = user;
+    properties.isAuthenticated = true;
 
     switch (activeTab){
         case 'rooms':
