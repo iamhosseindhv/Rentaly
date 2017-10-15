@@ -88,7 +88,7 @@ body {
 
 .listing-images {
     position: relative;
-    background-color: #933ec5;
+    background-color: #dcdcdc;
     background-repeat: no-repeat !important;
     background-size: cover !important;
     background-position: 50% 50% !important;
@@ -115,7 +115,7 @@ body {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    height: 380px;
+    /*height: 380px;*/
     width: 100%;
 }
 .form {
@@ -428,7 +428,7 @@ body {
     margin-top: 8px
 }
 #my-form .form-row:last-child {
-    padding: 0 8px;
+    padding: 0 12px;
 }
 .form-row {
     box-sizing: border-box;
@@ -460,10 +460,10 @@ body {
     font-size: 17px;
     white-space: normal;
 }
-.submit-btn {
-    background-color: #ad974f;
+.book-btn {
+    background-color: #ad974f !important;
     padding: 12px 21px !important;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
     color: #fff;
     width: 100%;
     border-radius: 3px;
@@ -477,7 +477,57 @@ body {
     display: inline-block;
     width: 50%;
 }
+.share-btn, .heart-btn {
+    display: inline-block;
+    width: calc(50% - 6px);
+    text-align: center;
+    background-color: white;
+    margin-bottom: 8px;
+    color: #484848;
+    outline: none;
+    text-decoration: none !important;
+    cursor: pointer;
+}
+.share-btn {
+    border-right: 1px solid #dcdcdc;
+}
+.heart-btn {
+    border-left: 1px solid #dcdcdc;
+}
+.inner-link {
+    padding: 8px 16px 5px 16px;
+}
+.inner-link span {
+    vertical-align: top;
+    padding-left: 4px;
+}
+.icon {
+    transition: all 0.3s;
+    padding: 1px 4px;
+    fill: transparent;
+    width: 20px;
+    stroke-linejoin: round;
+}
+.share {
+    stroke: #484848;
+    stroke-width:10px;
+}
+.heart {
+    stroke: red;
+    stroke-width:2px;
+}
 
+
+.base-layer {
+    z-index: 9 !important;
+}
+.submit-btn {
+    background-color: #ad974f !important;
+    color: #fff;
+}
+.msg span {
+    color: #bfad73 !important;
+}
 
 @media (min-width: 560px){
     .header-main {

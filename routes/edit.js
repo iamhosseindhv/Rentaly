@@ -53,14 +53,40 @@ router.post('/new-listing', isAuthenticated, function (req, res, next) {
                 res.send(response);
             }
         });
-
-
     }
-
 });
 
 
-
+router.post('/add-listing-to-favourite', function (req, res, next) {
+    if (req.isAuthenticated !== true){
+        res.json({
+            presentLogin: true,
+            favourited: false
+        });
+    } else {
+        //TODO: validate listingID
+        const listing_id = req.body.listingid;
+        const user_id = req.user.id;
+        const db = require('../database');
+        db.query('INSERT INTO favourited (user_id, listing_id) VALUES (?, ?)', [user_id, listing_id], function (err) {
+            if (err) {
+                if (err.code = 'ER_DUP_ENTRY') {
+                    res.json({
+                        presentLogin: false,
+                        favourited: false,
+                        message: 'Listing already added to favourite list'
+                    });
+                }
+            }
+            else {
+                res.json({
+                    presentLogin: false,
+                    favourited: true
+                });
+            }
+        });
+    }
+});
 
 
 

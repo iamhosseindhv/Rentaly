@@ -53,6 +53,60 @@ $(document).ready(function () {
         scrollToId(this);
     });
 
+
+    //favourite button hovered
+    $('.heart-btn')
+        .mouseover(function() {
+            $('.heart').css('fill', 'red');
+        })
+        .mouseout(function() {
+            $('.heart').css('fill', 'transparent');
+        });
+
+    //share button hovered
+    $('.share-btn')
+        .mouseover(function() {
+            $('.share').css('fill', '#484848');
+        })
+        .mouseout(function() {
+            $('.share').css('fill', 'transparent');
+        });
+
+    //favourite button clicked
+    $('#favourite-listing').click(function(e){
+        e.preventDefault();
+        const listingid = $(".column-6").attr('id');
+        $.ajax({
+            type: 'POST',
+            url: '/edit/add-listing-to-favourite',
+            data: {
+                listingid: listingid
+            },
+            success: function(data) {
+                if (data.presentLogin) {
+                    $('.base-layer').css('display', 'flex'); //present login then
+                } else {
+                    if (data.favourited) {
+                        successfullyFavourited();
+                    } else {
+                        //already favourited
+                        alert(data.message);
+                    }
+                }
+            },
+            error: function(data) {
+                console.log(data)
+            }
+        });
+    });
+
+    //share button clicked
+    $('#share-listing').click(function(e){
+        e.preventDefault();
+        //you should display a window with some options for sharing
+    });
+
+
     //date picker stuff
     const customOptions = {
         placeholder: "روز / ماه / سال",
@@ -102,6 +156,15 @@ function scrollToId(self) {
         }, scrollTime);
     }
     activateLink(id);
+}
+
+
+function successfullyFavourited() {
+    $('.heart-btn').css('fill', 'red !important');
+    $('#favourite-detail').text('Favourited');
+    $('.heart-btn')
+        .off('mouseover')
+        .off('mouseout');
 }
 
 function activateLink(id) {

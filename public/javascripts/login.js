@@ -82,7 +82,8 @@ function handleFormSuccess(data) {
             const isLoginPage = $('.submit-btn').text() === 'Login';
             if (isLoginPage){
                 //here you should redirect to referer url, (the url user has been redirected from), if any
-                window.location = '/';
+                $('.base-layer').css('display', 'none');
+                // window.locatio  = '/';
             } else {
                 //send verification email and user has to enter code to verify
             }
