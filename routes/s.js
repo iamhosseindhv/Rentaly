@@ -7,11 +7,11 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-     if (Object.keys(req.query).length === 0) {
-          res.redirect('..');
-     } else {
+     // if (Object.keys(req.query).length === 0) {
+     //      res.redirect('..');
+     // } else {
           renderSearchResultPage(res, req.query, null, req.isAuthenticated);
-     }
+     // }
 });
 
 
@@ -21,17 +21,17 @@ router.get('/:indicator', function(req, res, next) {
     const noQuery = Object.keys(req.query).length === 0;
     const notCityName = (indicator === 'homes' || indicator === 'all' || indicator === 'places'|| indicator === 'experiences');
     if (notCityName){
-        if (noQuery) {
+        // if (noQuery) {
             //shows homepage but active tab in homepage is 'indicator' - e.g. airbnb.co.uk/s/homes
-            res.render('index', {
-                title: 'HomePage',
-                isAuthenticated: req.isAuthenticated,
-                activeTab: indicator
-            });
-        }
-        else {
+            // res.render('index', {
+            //     title: 'HomePage',
+            //     isAuthenticated: req.isAuthenticated,
+            //     activeTab: indicator
+            // });
+        // }
+        // else {
             renderSearchResultPage(res, req.query, null, req.isAuthenticated);
-        }
+        // }
     }
     else {
         next();

@@ -36,7 +36,7 @@ var doQueryFromSearchedAddress = function (selectedPlace) {
     ddd = ddd.split(' ').join('-');
     splited[2] = ddd;
     const newUrl = splited.join('/') + "?" + queryString.stringify(parsed);
-    window.history.replaceState("", "", newUrl);
+    window.history.pushState("", "", newUrl);
 
     //here instead of overwriting url which caused the whole page to reload,
     //you should make a AJAX call to only reload result section of the page
@@ -84,8 +84,8 @@ function loadNewListings(listings, listings_count) {
         var cellThumbnail = $('<div class="cell-thumbnail">').appendTo(marginFree);
         <!---->
         var cellThumbnail_img = $('<img class="margin-free">').appendTo(cellThumbnail);
-        // cellThumbnail_img.attr("src", listing.thumbnail_img);
-        cellThumbnail_img.attr("src", "/images/owl.jpg");
+        cellThumbnail_img.attr("src", listing.thumbnail_img);
+        // cellThumbnail_img.attr("src", "/images/owl.jpg");
         <!---->
         var cellInfo = $('<div class="cell-info">').appendTo(parentLink);
         <!---->

@@ -84,7 +84,7 @@ function CenterControl(controlDiv, map) {
     controlText.style.lineHeight = '20px';
     controlText.style.paddingLeft = '5px';
     controlText.style.paddingRight = '5px';
-    controlText.innerHTML = 'CheckBox';
+    controlText.innerHTML = 'Search with map';
     controlUI.appendChild(controlText);
     controlUI.addEventListener('click', allowSearchByMapHandler);
 }
@@ -95,28 +95,17 @@ function allowSearchByMapHandler() {
     allowSearchByMap = !allowSearchByMap;
 
     if (allowSearchByMap){
-        document.getElementById('checkBox').innerHTML = "allowed";
+        document.getElementById('checkBox').innerHTML = "Search without map";
         mapListener = map.addListener('dragend', mapBoundsDidChanged);
     } else {
-        document.getElementById('checkBox').innerHTML = "notAllowed";
+        document.getElementById('checkBox').innerHTML = "Search with map";
         google.maps.event.removeListener(mapListener);
     }
 }
 
 //called when user selects an item from dropdown list
-var rectangle;
 function itemDidSelect() {
-    var place = autocomplete.getPlace();
-    rectangle = new google.maps.Rectangle();
-    rectangle.setOptions({
-        strokeColor: '#FF0000',
-        strokeOpacity: 0.5,
-        strokeWeight: 2,
-        fillColor: '#FF0000',
-        fillOpacity: 0.35,
-        map: map,
-        bounds: place.geometry.viewport
-    });
+    const place = autocomplete.getPlace();
     map.fitBounds(place.geometry.viewport);
     myBundle.doQueryFromSearchedAddress(place);
 }

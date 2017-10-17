@@ -15,12 +15,13 @@ router.get('/explore', function(req, res, next) {
     if (query.search_by_map === 'true'){
         console.log('should search by map coordinates');
         queryByMapCoordinates(query.ne_lat, query.ne_lng, query.sw_lat, query.sw_lng, query)
-            // .then(function (listings) {
-            //     var results = {};
-            //     results.listings = listings;
-            //     results.location = query.location.split('-').join(', ');
-            //     res.send(results);
-            // })
+            .then(function (results) {
+                var response = {};
+                response.listings = results.listings;
+                response.listings_count = results.listings_count;
+                response.location = null;
+                res.send(response);
+            })
         
     }
     else {
@@ -56,6 +57,7 @@ router.get('/explore', function(req, res, next) {
 
 function getCityLocation(query) {
     return new Promise(function(resolve, reject) {
+        console.log('location is:'+ query.location);
         const url = 'https://maps.googleapis.com/maps/api/geocode/json?address='
             + query.location + '&language=fa&key=AIzaSyDYmqhY-KcOz1kHrx6JlKK7QgsloTZNRp8';
         request(url, function (error, response, body) {
@@ -106,14 +108,46 @@ function makeNewQuery(query) {
 
 
 function queryByMapCoordinates(ne_lat, ne_lng, sw_lat, sw_lng, query) {
-    const select = "SELECT * FROM listing ";
-    const statement = "WHERE latitude BETWEEN " + sw_lat + " AND " + ne_lat + " AND longitude BETWEEN " + sw_lng + " AND " + ne_lng;
+    return new Promise(function(resolve, reject) {
+        var db = require('../database');
+        var countStatement = "WHERE latitude BETWEEN " + sw_lat + " AND " + ne_lat + " AND longitude BETWEEN " + sw_lng + " AND " + ne_lng;
+        // #1
+        if (query.guests) {
+            countStatement += " AND max_guest <= " + query.guests;
+        }
+        // #2
+        if (query.from && query.to) {
+            const from = query.from;
+            const to = query.to;
+            countStatement += "AND id NOT IN (SELECT listing_id FROM Reservations" +
+                " WHERE '" + to + "' BETWEEN checkin AND checkout" +
+                " OR checkout BETWEEN '" + from + "' AND '" + to + "'" +
+                " OR '" + from + "' BETWEEN checkin AND checkout" +
+                " OR checkin BETWEEN '" + from + "' AND '" + to + "')";
+        }
+        // #3
+        var limit = "";
+        if (query.offset) {
+            var offset = (query.offset - 1) * 18;
+            limit = " LIMIT " + offset + ",18";
+        } else {
+            limit = " LIMIT 18";
+        }
 
-}
-
-
-function queryWithoutLocation(query) {
-
+        const listingStatement = countStatement + limit;
+        var sqlAll = "SELECT * FROM listing " + listingStatement + ";";
+        var sqlCount = "SELECT COUNT(*) AS 'count' FROM listing " + countStatement + ";";
+        const final = {};
+        db.query(sqlCount, function (error, result) {
+            if (error) reject('some err getting total count');
+            final.listings_count = result[0].count;
+        });
+        db.query(sqlAll, function (error, listings) {
+            if (error) reject('some err getting listings');
+            final.listings = listings;
+            resolve(final);
+        });
+    });
 }
 
 
@@ -122,7 +156,7 @@ function getSqlStatement(query){
 
     // #1
     if (query.coordinates) {
-        const radius = 20; // km
+        const radius = 10; // km
         const angle_radius = radius / 111; // Every lat|lon degree is ~ 111Km
         const min_lat = query.coordinates.lat - angle_radius;
         const max_lat = query.coordinates.lat + angle_radius;

@@ -31,23 +31,23 @@
     <% include partials/login.html %>
 
     <div class="head">
-        <div class="grid" style="direction: rtl">
-            <div class="barWrapper-1" style="background-color: red">
+        <div class="grid" style="direction: rtl;">
+            <div class="barWrapper-1">
                 <input id="autocomplete" placeholder="Enter your address" type="text" value="<%= location %>">
             </div>
-            <div class="barWrapper-2"  style="background-color: blue">
-                <span class="">
-                    <input readonly type=text id="to-date">
-                </span>
-                <span class="">
-                    <input readonly type=text id="from-date">
+            <div class="barWrapper-2">
+                <span>
+                    <input readonly type="text" id="to-date" placeholder="Check-out">
                 </span>
                 <span>
-                    <button onclick="myModule.searchDates()">Search</button>
+                    <input readonly type="text" id="from-date" placeholder="Check-in">
+                </span>
+                <span>
+                    <button class="search-btn" onclick="myModule.searchDates()">Search</button>
                 </span>
             </div>
-            <div class="barWrapper-3"  style="background-color: green">
-                <select id="guestPicker">
+            <div class="barWrapper-3">
+                <select id="guestPicker" class="input-select">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -64,6 +64,11 @@
                     <option value="14">14</option>
                     <option value="15">15</option>
                 </select>
+                <span class="dropdown-icon">
+                    <svg viewBox="0 0 18 18" role="presentation" aria-hidden="true" focusable="false" style="display:block; fill:#484848; height:12px; width:12px;">
+                        <path fill-rule="evenodd" d="M16.291 4.295a1 1 0 1 1 1.414 1.415l-8 7.995a1 1 0 0 1-1.414 0l-8-7.995a1 1 0 1 1 1.414-1.415l7.293 7.29 7.293-7.29z"></path>
+                    </svg>
+                </span>
             </div>
             <div class="barWrapper-4">
                 <ul>
@@ -74,9 +79,11 @@
                         <span class="head-item" id="login-signin-btn">Login / Sign Up</span>
                         <% } %>
                     </li>
+                    <li class="head-li" id="logo">
+                        <span class="head-item">LOGO HERE</span>
+                    </li>
                 </ul>
             </div>
-
         </div>
     </div>
 
@@ -90,27 +97,54 @@
             <div id="main" class="grid">
                 <% listings.forEach(function(record){ %>
                 <div id="<%= record.id %>" class="cell result-cell">
-                    <a href=<%= "../../rooms/" + record.id + "?" + "queryString consisted of city, " +
-                        "checkin-out date, no of guests, no of adults and children"%>>
+                    <a href=<%= "../../rooms/" + record.id + "?"%>>
                         <div class="box">
                             <div class="margin-free">
                                 <div class="cell-thumbnail">
-                                    <!--<img class="text" src= < %= record.thumbnail_img % >>-->
-                                    <img class="margin-free" src="/images/owl.jpg">
+                                    <img class="margin-free" src= <%= record.thumbnail_img %>>
+                                    <!--<img class="margin-free" src="/images/owl.jpg">-->
                                 </div>
                             </div>
                         </div>
                         <div class="cell-info">
-                            <div class="cell-info--row">
-                                <span class="cell-info--price"><%= record.price %></span>
-                                <span class="cell-info--title"><%= record.title %></span>
+                            <div class="cell-info-detail">
+                                <div class="cell-info--row">
+                                    <span class="cell-info--price">£<%= record.price %></span>
+                                    <span class="cell-info--title"><%= record.title %></span>
+                                </div>
+                                <div class="cell-info--row">
+                                    <span class="cell-info--type"><%= record.type %></span>
+                                    <span class="cell-info--bedroomCount"><%= record.bedroom_count %> Bedroom</span>
+                                </div>
+                                <div class="cell-info--row">
+                                    <div class="cell-info--review-stars">
+                                        <span class="review-stars--individual">
+                                            <svg viewBox="0 0 1000 1000" role="presentation" focusable="false"><path d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"></path>
+                                            </svg>
+                                        </span>
+                                        <span class="review-stars--individual">
+                                            <svg viewBox="0 0 1000 1000" role="presentation" focusable="false"><path d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"></path>
+                                            </svg>
+                                        </span>
+                                        <span class="review-stars--individual">
+                                            <svg viewBox="0 0 1000 1000" role="presentation" focusable="false"><path d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"></path>
+                                            </svg>
+                                        </span>
+                                        <span class="review-stars--individual">
+                                            <svg viewBox="0 0 1000 1000" role="presentation" focusable="false"><path d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"></path>
+                                            </svg>
+                                        </span>
+                                        <span class="review-stars--individual" style="color: #D8D8D8 !important;">
+                                            <svg viewBox="0 0 1000 1000" role="presentation" focusable="false"><path d="M971.5 379.5c9 28 2 50-20 67L725.4 618.6l87 280.1c11 39-18 75-54 75-12 0-23-4-33-12l-226.1-172-226.1 172.1c-25 17-59 12-78-12-12-16-15-33-8-51l86-278.1L46.1 446.5c-21-17-28-39-19-67 8-24 29-40 52-40h280.1l87-278.1c7-23 28-39 52-39 25 0 47 17 54 41l87 276.1h280.1c23.2 0 44.2 16 52.2 40z"></path>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <div class="cell-info--review-count"><%= record.review_count %> reviews</div>
+                                </div>
                             </div>
-                            <div class="cell-info--row">
-                                <span class="cell-info--type"><%= record.type %></span>
-                                <span class="cell-info--bedCount"><%= record.bed_count %> Bed</span>
-                            </div>
-                            <div class="cell-info--row">
-                                <span class="cell-info--review"><%= record.review_count %></span>
+                            <div class="cell-info-heart">
+                                <svg class="icon-heart" viewBox="0 0 50 50"><path xmlns="http://www.w3.org/2000/svg" d="M24.85,10.126c2.018-4.783,6.628-8.125,11.99-8.125c7.223,0,12.425,6.179,13.079,13.543  c0,0,0.353,1.828-0.424,5.119c-1.058,4.482-3.545,8.464-6.898,11.503L24.85,48L7.402,32.165c-3.353-3.038-5.84-7.021-6.898-11.503  c-0.777-3.291-0.424-5.119-0.424-5.119C0.734,8.179,5.936,2,13.159,2C18.522,2,22.832,5.343,24.85,10.126z"/>
+                                </svg>
                             </div>
                         </div>
                     </a>
