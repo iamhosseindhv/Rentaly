@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0a3734b-614c-465a-ada2-ad49b70c8263" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/partials/footer.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/rooms.css" afterPath="$PROJECT_DIR$/public/stylesheets/rooms.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/rooms.ejs" afterPath="$PROJECT_DIR$/views/rooms.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/dashboard/rooms.ejs" afterPath="$PROJECT_DIR$/views/dashboard/rooms.ejs" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,11 +18,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="rooms.ejs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="rooms.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/rooms.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="299" column="23" lean-forward="false" selection-start-line="299" selection-start-column="23" selection-end-line="299" selection-end-column="23" />
+            <state relative-caret-position="344">
+              <caret line="309" column="18" lean-forward="true" selection-start-line="309" selection-start-column="0" selection-end-line="310" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rooms.ejs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/dashboard/rooms.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="354">
+              <caret line="80" column="41" lean-forward="false" selection-start-line="80" selection-start-column="41" selection-end-line="80" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -192,7 +200,6 @@
         <option value="$PROJECT_DIR$/public/javascripts/login.js" />
         <option value="$PROJECT_DIR$/routes/dashboard.js" />
         <option value="$PROJECT_DIR$/views/dashboard/header-container.html" />
-        <option value="$PROJECT_DIR$/views/dashboard/rooms.ejs" />
         <option value="$PROJECT_DIR$/routes/rooms.js" />
         <option value="$PROJECT_DIR$/views/partials/header.html" />
         <option value="$PROJECT_DIR$/public/javascripts/searchResult.js" />
@@ -206,6 +213,7 @@
         <option value="$PROJECT_DIR$/public/stylesheets/rooms.css" />
         <option value="$PROJECT_DIR$/views/rooms.ejs" />
         <option value="$PROJECT_DIR$/views/partials/footer.html" />
+        <option value="$PROJECT_DIR$/views/dashboard/rooms.ejs" />
       </list>
     </option>
   </component>
@@ -642,7 +650,7 @@
       <workItem from="1505945957902" duration="353000" />
       <workItem from="1506537121554" duration="50733000" />
       <workItem from="1507186266345" duration="79682000" />
-      <workItem from="1507890812979" duration="49836000" />
+      <workItem from="1507890812979" duration="50020000" />
     </task>
     <task id="LOCAL-00001" summary="improved">
       <created>1504902264476</created>
@@ -826,11 +834,18 @@
       <option name="project" value="LOCAL" />
       <updated>1508282589475</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="footer modularised">
+      <created>1508283961598</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1508283961598</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="522275000" />
+    <option name="totallyTimeSpent" value="522459000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -888,7 +903,8 @@
     <MESSAGE value="user now can favourite listing" />
     <MESSAGE value="global communal top header added" />
     <MESSAGE value="project improved - overall" />
-    <option name="LAST_COMMIT_MESSAGE" value="project improved - overall" />
+    <MESSAGE value="footer modularised" />
+    <option name="LAST_COMMIT_MESSAGE" value="footer modularised" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1094,14 +1110,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="370">
           <caret line="31" column="18" lean-forward="false" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/dashboard/rooms.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="81" column="44" lean-forward="true" selection-start-line="81" selection-start-column="44" selection-end-line="81" selection-end-column="44" />
           <folding />
         </state>
       </provider>
@@ -1355,8 +1363,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/rooms.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="299" column="23" lean-forward="false" selection-start-line="299" selection-start-column="23" selection-end-line="299" selection-end-column="23" />
+        <state relative-caret-position="344">
+          <caret line="309" column="18" lean-forward="true" selection-start-line="309" selection-start-column="0" selection-end-line="310" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/dashboard/rooms.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="80" column="41" lean-forward="false" selection-start-line="80" selection-start-column="41" selection-end-line="80" selection-end-column="41" />
           <folding />
         </state>
       </provider>
