@@ -8,11 +8,10 @@ Search Page
 ==============
 
 on Desktop
---------------
+
 ![alt text](https://github.com/iamhosseindhv/NodeWeb/blob/master/Gifs/search-desktop.gif "Search page on Desktop")
 
 on Tablet
---------------
 
 ![alt text](https://github.com/iamhosseindhv/NodeWeb/blob/master/Gifs/search-tablet.gif "Search page on Tablet")
 
