@@ -2,12 +2,12 @@
 Online Room Booking Website
 
 
-Search Page
-==============
-Desktop
+
+
+Search Page on Desktop
 --------------
 ![alt text](https://github.com/iamhosseindhv/NodeWeb/blob/master/Gifs/search-desktop.gif "Search page on Desktop")
-Tablet
+Search Page on Tablet
 --------------
 ![alt text](https://github.com/iamhosseindhv/NodeWeb/blob/master/Gifs/search-tablet.gif "Search page on Tablet")
 
