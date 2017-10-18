@@ -46,8 +46,8 @@ User's Dashboard Page
 
 on Desktop
 
-![alt text](https://github.com/iamhosseindhv/NodeWeb/blob/master/Gifs/dasboard-desktop.gif "Dasboard page on Desktop")
+![alt text](https://github.com/iamhosseindhv/NodeWeb/blob/master/Gifs/dashboard-desktop.gif "Dashboard page on Desktop")
 
 on Tablet
 
-![alt text](https://github.com/iamhosseindhv/NodeWeb/blob/master/Gifs/dasboard-tablet.gif "Dasboard page on Tablet")
+![alt text](https://github.com/iamhosseindhv/NodeWeb/blob/master/Gifs/dashboard-tablet.gif "Dashboard page on Tablet")
