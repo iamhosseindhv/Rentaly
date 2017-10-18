@@ -7,11 +7,11 @@ Online Room Booking Website
 Search Page
 ==============
 
-on Desktop
+Desktop
 
 ![alt text](https://github.com/iamhosseindhv/NodeWeb/blob/master/Gifs/search-desktop.gif "Search page on Desktop")
 
-on Tablet
+Tablet
 
 ![alt text](https://github.com/iamhosseindhv/NodeWeb/blob/master/Gifs/search-tablet.gif "Search page on Tablet")
 
@@ -19,11 +19,11 @@ on Tablet
 Invidual Room Page
 ==============
 
-on Desktop
+Desktop
 
 ![alt text](https://github.com/iamhosseindhv/NodeWeb/blob/master/Gifs/rooms-desktop.gif "Rooms page on Desktop")
 
-on Tablet
+Tablet
 
 ![alt text](https://github.com/iamhosseindhv/NodeWeb/blob/master/Gifs/rooms-tablet.gif "Rooms page on Tablet")
 
@@ -32,11 +32,11 @@ on Tablet
 Login/Signup
 ==============
 
-on Desktop
+Desktop
 
 ![alt text](https://github.com/iamhosseindhv/NodeWeb/blob/master/Gifs/login-desktop.gif "Login page on Desktop")
 
-on Tablet
+Tablet
 
 ![alt text](https://github.com/iamhosseindhv/NodeWeb/blob/master/Gifs/login-tablet.gif "Login page on Tablet")
 
@@ -44,10 +44,10 @@ on Tablet
 User's Dashboard Page
 ==============
 
-on Desktop
+Desktop
 
 ![alt text](https://github.com/iamhosseindhv/NodeWeb/blob/master/Gifs/dashboard-desktop.gif "Dashboard page on Desktop")
 
-on Tablet
+Mobile
 
 ![alt text](https://github.com/iamhosseindhv/NodeWeb/blob/master/Gifs/dashboard-tablet.gif "Dashboard page on Tablet")
