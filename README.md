@@ -16,14 +16,26 @@ on Tablet
 ![alt text](https://github.com/iamhosseindhv/NodeWeb/blob/master/Gifs/search-tablet.gif "Search page on Tablet")
 
 
+Invidual Room Page
+==============
+
+on Desktop
+
+![alt text](https://github.com/iamhosseindhv/NodeWeb/blob/master/Gifs/rooms-desktop.gif "Rooms page on Desktop")
+
+on Tablet
+
+![alt text](https://github.com/iamhosseindhv/NodeWeb/blob/master/Gifs/rooms-tablet.gif "Rooms page on Tablet")
+
+
 
 Invidual Room Page
 ==============
-Desktop
---------------
+
+on Desktop
+
 ![alt text](https://github.com/iamhosseindhv/NodeWeb/blob/master/Gifs/rooms-desktop.gif "Rooms page on Desktop")
 
-Tablet
---------------
-![alt text](https://github.com/iamhosseindhv/NodeWeb/blob/master/Gifs/rooms-tablet.gif "Rooms page on Tablet")
+on Tablet
 
+![alt text](https://github.com/iamhosseindhv/NodeWeb/blob/master/Gifs/rooms-tablet.gif "Rooms page on Tablet")
