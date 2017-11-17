@@ -1,4 +1,4 @@
-# NodeWeb
+# Rentaly
 Online Room Booking Website
 
 
