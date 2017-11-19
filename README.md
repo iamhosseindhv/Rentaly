@@ -2,19 +2,14 @@
 
 Online Room Booking Website and dexription goes here
 
-
 Table of Contents
 --
-
-<!-- TOC depthFrom:2 depthTo:4 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [Summary](#summary)
 - [Available Pages](#available-pages)
 - [TODO list](#todo-list)
 - [Author](#author)
 - [License](#license)
-
-
 
 ## Summary
 * Built with Passion, enthusiasm and ❤️
@@ -44,8 +39,7 @@ Table of Contents
 - [ ] Unit testing
 - [ ] Normalising MySQL database tables
 
-### Note: 
-Since the project is still under development, some features may not work as expected. They will be fixed. SOON 🔜.
+**Note:** Since the project is still under development, some features may not work as expected. They will be fixed. SOON 🔜.
 
 
 ## Author:
@@ -53,16 +47,11 @@ Hossein Dehnokhalaji
 <a href="https://www.linkedin.com/in/iamhosseindhv"><img src="https://github.com/iamhosseindhv/Rentaly/blob/master/Gifs/linkedin.png" alt="Hossein Dehnokhalaji Linkedin profile" align="right" width="32" height="32"/></a>
 <a href="https://www.instagram.com/iamhosseindhv"><img src="https://github.com/iamhosseindhv/Rentaly/blob/master/Gifs/instagram.png" alt="Hossein Dehnokhalaji Linkedin profile" align="right" width="32" height="32"/></a>
 <a href="https://www.facebook.com/iamhosseindhv"><img src="https://github.com/iamhosseindhv/Rentaly/blob/master/Gifs/facebook.png" alt="Hossein Dehnokhalaji Linkedin profile" align="right" width="32" height="32"/></a>
-
-
-<img src="https://github.com/iamhosseindhv/Rentaly/blob/master/Gifs/linkedin.png" alt="Hossein Dehnokhalaji Linkedin profile" align="right" width="32" height="32"/>
-<img src="https://github.com/iamhosseindhv/Rentaly/blob/master/Gifs/instagram.png" alt="Hossein Dehnokhalaji Instagram profile" align="right" width="32" height="32"/>
-<img src="https://github.com/iamhosseindhv/Rentaly/blob/master/Gifs/facebook.png" alt="Hossein Dehnokhalaji Facebook profile" align="right" width="32" height="32"/>
-
+<a href="mailto:hossein.dehnavi98@yahoo.com"><img src="https://github.com/iamhosseindhv/Rentaly/blob/master/Gifs/facebook.png" alt="Hossein Dehnokhalaji Linkedin profile" align="right" width="32" height="32"/></a>
 
 
 ## License:
-dsaaddas
+**MIT**: Do whatever you want to do with it. but notice that I'm not liable for that, and you should also mention my name in every copy of your software
 
 
 
