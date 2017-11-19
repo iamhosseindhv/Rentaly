@@ -8,7 +8,7 @@ Table of Contents
 - [Summary](#summary)
 - [Available Pages](#available-pages)
 - [TODO list](#todo-list)
-- [Author](#author)
+- [Author - Contact](#author-contact)
 - [License](#license)
 - [Some GIF](#some-gif)
 
@@ -43,7 +43,7 @@ Table of Contents
 **Note:** Since the project is still under development, some features may not work as expected. They will be fixed. SOON 🔜.
 
 
-## Author:
+## Author - Contact:
 Hossein Dehnokhalaji
 <a href="https://www.facebook.com/iamhosseindhv"><img src="https://github.com/iamhosseindhv/Rentaly/blob/master/Gifs/facebook.png" alt="Hossein Dehnokhalaji Linkedin profile" align="right" width="32" height="32"/></a>
 <a href="https://www.instagram.com/iamhosseindhv"><img src="https://github.com/iamhosseindhv/Rentaly/blob/master/Gifs/instagram.png" alt="Hossein Dehnokhalaji Linkedin profile" align="right" width="32" height="32"/></a>
@@ -71,4 +71,6 @@ Hossein Dehnokhalaji
 
 ### User's Dashboard (Desktop/Mobile)
 ![alt text](https://github.com/iamhosseindhv/NodeWeb/blob/master/Gifs/dashboard-desktop.gif "Dashboard page on Desktop")
+
+
 ![alt text](https://github.com/iamhosseindhv/NodeWeb/blob/master/Gifs/dashboard-tablet.gif "Dashboard page on Tablet")
