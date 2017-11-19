@@ -1,3 +1,10 @@
+<!-- How to have social media icons in your GitHub profile: https://github.com/carlsednaoui/gitsocial -->
+[1.1]: http://i.imgur.com/tXSoThF.png (Linkedin icon with padding)
+[2.1]: http://i.imgur.com/P3YfQoD.png (Instagarm icon with padding)
+[3.1]: http://i.imgur.com/yCsTjba.png (Facebook plus icon with padding)
+[1]: https://www.linkedin.com/in/iamhosseindhv
+[2]: https://www.instagram.com/iamhosseindhv
+[3]: https://www.facebook.com/iamhosseindhv
 # Rentaly
 
 Online Room Booking Website and dexription goes here
@@ -10,8 +17,10 @@ Table of Contents
 
 - [Summary](#summary)
 - [Available Pages](#available-pages)
+- [TODO list](#todo-list)
+- [Author](#author)
+- [License](#license)
 
-table of content goes here
 
 
 ## Summary
@@ -24,31 +33,42 @@ table of content goes here
 * Google Maps API Integration
 * Google Places API Integration
 * Server and client side form validation
-* ???
 * …
 
 
+
 ## Available Pages:
-* [Search page (explore listings)](https://rentaly.herokuapp.com)
-* [listing’s specific page](https://rentaly.herokuapp.com/rooms/10)
+* [Search page](https://rentaly.herokuapp.com) (explore listings)
+* [Listing’s page](https://rentaly.herokuapp.com/rooms/10)
 * Authenticated users’ [dashboard](https://rentaly.herokuapp.com/dashboard) to see their listings (if any)
 * Page for [adding new listings](https://rentaly.herokuapp.com/edit/new-listing)
 
 
-## TODO list (like other Github repositories):
-* Payment and Booking Implementation
-* Unit testing
-* Normalising MySQL database tables
 
+## TODO list:
+- [x] Search based on date availability
+- [ ] Payment and Booking implementation
+- [ ] Unit testing
+- [ ] Normalising MySQL database tables
 
-### Note: Since the project is still under development, some features may not work as expected. They will be fixed. SOON 🔜.
-
+### Note: 
+Since the project is still under development, some features may not work as expected. They will be fixed. SOON 🔜.
 
 
 ## Author:
+Hossein Dehnokhalaji
+
+Social Media: 
+
+[![alt text][1.1]][1]
+[![alt text][2.1]][2]
+[![alt text][3.1]][3]
+
 
 
 ## License:
+dsaaddas
+
 
 
 Search Page
