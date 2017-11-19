@@ -4,7 +4,7 @@
 
 Table of Contents
 --
-- [Prerequisites](#prerequisites)
+- [Some Notes](#some-notes)
 - [Summary](#summary)
 - [Available Pages](#available-pages)
 - [TODO list](#todo-list)
@@ -12,10 +12,14 @@ Table of Contents
 - [License](#license)
 - [Some GIF](#some-gif)
 
-## Prerequisites
-before using the website demo email and stuff  goes here
-
-**Note:** Since the project is still under development, some features may not work as expected. They will be fixed. SOON 🔜.
+## Some Notes  
+Before browsing the website, notice:  
+* Some pages require the user to be logged in. For the purpose of demonstration and for having a better user experience, you may want to login as the following user:  
+	**Email**: guestUser@gmail.co.uk  
+	**Pass**: 42214221Dd  
+	However, you can create a new account if you wish.  
+* Listing data are generated randomly using a small Java software that I wrote. Code of which can be found [here](https://gist.github.com/iamhosseindhv/1eb775b4a2bcda31fd3c834d0eb9208c).
+* Since the project is still under development, some features may not work as expected. They will be fixed. SOON 🔜.
 
 
 ## Summary
