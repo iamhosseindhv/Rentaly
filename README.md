@@ -15,6 +15,9 @@ Table of Contents
 ## Prerequisites
 before using the website demo email and stuff  goes here
 
+**Note:** Since the project is still under development, some features may not work as expected. They will be fixed. SOON 🔜.
+
+
 ## Summary
 * Built with Passion, enthusiasm and ❤️
 * Node.js ➡️ server side
@@ -42,8 +45,6 @@ before using the website demo email and stuff  goes here
 - [ ] Payment and Booking implementation
 - [ ] Unit testing
 - [ ] Normalising MySQL database tables
-
-**Note:** Since the project is still under development, some features may not work as expected. They will be fixed. SOON 🔜.
 
 
 ## Author - Contact
