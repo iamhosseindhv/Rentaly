@@ -1,10 +1,3 @@
-<!-- How to have social media icons in your GitHub profile: https://github.com/carlsednaoui/gitsocial -->
-[1.1]: http://i.imgur.com/tXSoThF.png (Linkedin icon with padding)
-[2.1]: http://i.imgur.com/P3YfQoD.png (Instagarm icon with padding)
-[3.1]: http://i.imgur.com/yCsTjba.png (Facebook plus icon with padding)
-[1]: https://www.linkedin.com/in/iamhosseindhv
-[2]: https://www.instagram.com/iamhosseindhv
-[3]: https://www.facebook.com/iamhosseindhv
 # Rentaly
 
 Online Room Booking Website and dexription goes here
@@ -46,7 +39,7 @@ Table of Contents
 
 
 ## TODO list:
-- [x] Search based on date availability
+- [x] Search listings based on date availability
 - [ ] Payment and Booking implementation
 - [ ] Unit testing
 - [ ] Normalising MySQL database tables
@@ -57,12 +50,14 @@ Since the project is still under development, some features may not work as expe
 
 ## Author:
 Hossein Dehnokhalaji
+<a href="https://www.linkedin.com/in/iamhosseindhv"><img src="https://github.com/iamhosseindhv/Rentaly/blob/master/Gifs/linkedin.png" alt="Hossein Dehnokhalaji Linkedin profile" align="right" width="32" height="32"/></a>
+<a href="https://www.instagram.com/iamhosseindhv"><img src="https://github.com/iamhosseindhv/Rentaly/blob/master/Gifs/instagram.png" alt="Hossein Dehnokhalaji Linkedin profile" align="right" width="32" height="32"/></a>
+<a href="https://www.facebook.com/iamhosseindhv"><img src="https://github.com/iamhosseindhv/Rentaly/blob/master/Gifs/facebook.png" alt="Hossein Dehnokhalaji Linkedin profile" align="right" width="32" height="32"/></a>
 
-Social Media: 
 
-[![alt text][1.1]][1]
-[![alt text][2.1]][2]
-[![alt text][3.1]][3]
+<img src="https://github.com/iamhosseindhv/Rentaly/blob/master/Gifs/linkedin.png" alt="Hossein Dehnokhalaji Linkedin profile" align="right" width="32" height="32"/>
+<img src="https://github.com/iamhosseindhv/Rentaly/blob/master/Gifs/instagram.png" alt="Hossein Dehnokhalaji Instagram profile" align="right" width="32" height="32"/>
+<img src="https://github.com/iamhosseindhv/Rentaly/blob/master/Gifs/facebook.png" alt="Hossein Dehnokhalaji Facebook profile" align="right" width="32" height="32"/>
 
 
 
