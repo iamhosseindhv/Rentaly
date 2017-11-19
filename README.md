@@ -18,7 +18,8 @@ Before browsing the website, notice:
 	**Email**: guestUser@gmail.co.uk  
 	**Pass**: 42214221Dd  
 	However, you can create a new account if you wish.  
-* Listing data are generated randomly using a small Java software that I wrote. Code of which can be found [here](https://gist.github.com/iamhosseindhv/1eb775b4a2bcda31fd3c834d0eb9208c).
+* Listing data are generated randomly using a small Java software that I wrote, code of which can be found [here](https://gist.github.com/iamhosseindhv/1eb775b4a2bcda31fd3c834d0eb9208c).
+* Due to the fact that there are not sufficient data for every listing's page, by clicking on a listing you will be randomly redirected to **3** predefined pages.
 * Since the project is still under development, some features may not work as expected. They will be fixed. SOON 🔜.
 
 
