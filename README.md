@@ -49,6 +49,7 @@ Before browsing the website, notice:
 - [x] Search listings based on date availability
 - [ ] Payment and Booking implementation
 - [ ] Unit testing
+- [ ] Secure authentication against CSRF attacks
 - [ ] Normalising MySQL database tables
 
 
