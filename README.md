@@ -8,7 +8,7 @@ Table of Contents
 - [Summary](#summary)
 - [Available Pages](#available-pages)
 - [TODO list](#todo-list)
-- [Author - Contact](#author-contact)
+- [Author - Contact me](#author---contact-me)
 - [License](#license)
 - [Some GIF](#some-gif)
 
