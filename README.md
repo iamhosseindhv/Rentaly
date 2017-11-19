@@ -1,7 +1,54 @@
 # Rentaly
-Online Room Booking Website
+
+Online Room Booking Website and dexription goes here
 
 
+Table of Contents
+--
+
+<!-- TOC depthFrom:2 depthTo:4 withLinks:1 updateOnSave:1 orderedList:0 -->
+
+- [Summary](#summary)
+- [Available Pages](#available-pages)
+
+table of content goes here
+
+
+## Summary
+* Built with Passion, enthusiasm and ❤️
+* Node.js ➡️ server side
+* JavaScript - jQuery ➡️ client side
+* Fully responsive website 
+* MySQL database Integration
+* Token-based authentication
+* Google Maps API Integration
+* Google Places API Integration
+* Server and client side form validation
+* ???
+* …
+
+
+## Available Pages:
+* [Search page (explore listings)](https://rentaly.herokuapp.com)
+* [listing’s specific page](https://rentaly.herokuapp.com/rooms/10)
+* Authenticated users’ [dashboard](https://rentaly.herokuapp.com/dashboard) to see their listings (if any)
+* Page for [adding new listings](https://rentaly.herokuapp.com/edit/new-listing)
+
+
+## TODO list (like other Github repositories):
+* Payment and Booking Implementation
+* Unit testing
+* Normalising MySQL database tables
+
+
+### Note: Since the project is still under development, some features may not work as expected. They will be fixed. SOON 🔜.
+
+
+
+## Author:
+
+
+## License:
 
 
 Search Page
