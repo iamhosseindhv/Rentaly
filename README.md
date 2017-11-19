@@ -10,6 +10,7 @@ Table of Contents
 - [TODO list](#todo-list)
 - [Author](#author)
 - [License](#license)
+- [Some GIF](#some-gif)
 
 ## Summary
 * Built with Passion, enthusiasm and ❤️
@@ -55,34 +56,17 @@ Hossein Dehnokhalaji
 **MIT**: Do whatever you want to do with it. but notice that I'm not liable for that, and you should also mention my name in every copy of your software.
 
 
-
-Search Page
-==============
-
-Desktop
-
-![alt text](https://github.com/iamhosseindhv/NodeWeb/blob/master/Gifs/search-desktop.gif "Search page on Desktop")
-
-Tablet
-
+## Some GIF
+### Search page on Tablet
 ![alt text](https://github.com/iamhosseindhv/NodeWeb/blob/master/Gifs/search-tablet.gif "Search page on Tablet")
 
 
-Invidual Room Page
-==============
-
-Desktop
-
+### Each listing's page on Desktop
 ![alt text](https://github.com/iamhosseindhv/NodeWeb/blob/master/Gifs/rooms-desktop.gif "Rooms page on Desktop")
 
-Tablet
-
-![alt text](https://github.com/iamhosseindhv/NodeWeb/blob/master/Gifs/rooms-tablet.gif "Rooms page on Tablet")
 
 
-
-Login/Signup
-==============
+### Login/Signup
 
 Desktop
 
@@ -93,8 +77,7 @@ Tablet
 ![alt text](https://github.com/iamhosseindhv/NodeWeb/blob/master/Gifs/login-tablet.gif "Login page on Tablet")
 
 
-User's Dashboard Page
-==============
+### User's Dashboard Page
 
 Desktop
 
