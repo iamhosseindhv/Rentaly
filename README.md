@@ -1,16 +1,19 @@
 # Rentaly
 
-Online Room Booking Website and dexription goes here
+[Renally](https://rentaly.herokuapp.com) is an **Online Room Booking Website** where users can **search** through listings using wide range of filters including location, check-in and check-out (availability) dates, price and number of guests. There're also able to **view details** of the desired room, login and finally **book** a room for the desired dates. Besides, a user can also be a **host** and is able to add listings so that other people can book it. 
 
 Table of Contents
 --
-
+- [Prerequisites](#prerequisites)
 - [Summary](#summary)
 - [Available Pages](#available-pages)
 - [TODO list](#todo-list)
 - [Author - Contact me](#author---contact)
 - [License](#license)
 - [Some GIF](#some-gif)
+
+## Prerequisites
+before using the website demo email and stuff  goes here
 
 ## Summary
 * Built with Passion, enthusiasm and ❤️
@@ -26,7 +29,7 @@ Table of Contents
 
 
 
-## Available Pages:
+## Available Pages
 * [Search page](https://rentaly.herokuapp.com) (explore listings)
 * [Listing’s page](https://rentaly.herokuapp.com/rooms/10)
 * Authenticated users’ [dashboard](https://rentaly.herokuapp.com/dashboard) to see their listings (if any)
@@ -34,7 +37,7 @@ Table of Contents
 
 
 
-## TODO list:
+## TODO list
 - [x] Search listings based on date availability
 - [ ] Payment and Booking implementation
 - [ ] Unit testing
@@ -43,14 +46,14 @@ Table of Contents
 **Note:** Since the project is still under development, some features may not work as expected. They will be fixed. SOON 🔜.
 
 
-## Author - Contact:
+## Author - Contact
 Hossein Dehnokhalaji
 <a href="https://www.facebook.com/iamhosseindhv"><img src="https://github.com/iamhosseindhv/Rentaly/blob/master/Gifs/facebook.png" alt="Hossein Dehnokhalaji Linkedin profile" align="right" width="32" height="32"/></a>
 <a href="https://www.instagram.com/iamhosseindhv"><img src="https://github.com/iamhosseindhv/Rentaly/blob/master/Gifs/instagram.png" alt="Hossein Dehnokhalaji Linkedin profile" align="right" width="32" height="32"/></a>
 <a href="https://www.linkedin.com/in/iamhosseindhv"><img src="https://github.com/iamhosseindhv/Rentaly/blob/master/Gifs/linkedin.png" alt="Hossein Dehnokhalaji Linkedin profile" align="right" width="32" height="32"/></a>
 <a href="mailto:hossein.dehnavi98@yahoo.com"><img src="https://github.com/iamhosseindhv/Rentaly/blob/master/Gifs/contact.png" alt="Hossein Dehnokhalaji email address" align="right" width="32" height="32"/></a>
 
-## License: 
+## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 **MIT**: Do whatever you want to do with it. but notice that I'm not liable for that, and you should also mention my name in every copy of your software.
