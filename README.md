@@ -57,32 +57,18 @@ Hossein Dehnokhalaji
 
 
 ## Some GIF
-### Search page on Tablet
+### Search page (Tablet)
 ![alt text](https://github.com/iamhosseindhv/NodeWeb/blob/master/Gifs/search-tablet.gif "Search page on Tablet")
 
 
-### Each listing's page on Desktop
+### Each listing's page (Desktop)
 ![alt text](https://github.com/iamhosseindhv/NodeWeb/blob/master/Gifs/rooms-desktop.gif "Rooms page on Desktop")
 
 
-
-### Login/Signup
-
-Desktop
-
-![alt text](https://github.com/iamhosseindhv/NodeWeb/blob/master/Gifs/login-desktop.gif "Login page on Desktop")
-
-Tablet
-
+### Authentication (Tablet)
 ![alt text](https://github.com/iamhosseindhv/NodeWeb/blob/master/Gifs/login-tablet.gif "Login page on Tablet")
 
 
-### User's Dashboard Page
-
-Desktop
-
+### User's Dashboard (Desktop/Mobile)
 ![alt text](https://github.com/iamhosseindhv/NodeWeb/blob/master/Gifs/dashboard-desktop.gif "Dashboard page on Desktop")
-
-Mobile
-
 ![alt text](https://github.com/iamhosseindhv/NodeWeb/blob/master/Gifs/dashboard-tablet.gif "Dashboard page on Tablet")
