@@ -28,6 +28,7 @@ Before browsing the website, notice:
 * Node.js ➡️ server side
 * JavaScript - jQuery ➡️ client side
 * Fully responsive website 
+* RESTful API implemented 
 * MySQL database Integration
 * Token-based authentication
 * Google Maps API Integration
