@@ -1,6 +1,6 @@
 # Rentaly 
 
-[Rentaly](https://rentaly.herokuapp.com) is an **Online Room Booking Website** where users can **search** through listings using wide range of filters including location, check-in and check-out (availability) dates, price and number of guests. There're also able to **view details** of the desired room, login and finally **book** a room for the desired dates. Besides, a user can also be a **host** and is able to add listings so that other people can book it. 
+[Rentaly](http://www.rentaly.co.uk) is an **Online Room Booking Website** where users can **search** through listings using wide range of filters including location, check-in and check-out (availability) dates, price and number of guests. There're also able to **view details** of the desired room, login and finally **book** a room for the desired dates. Besides, a user can also be a **host** and is able to add listings so that other people can book it. 
 
 Table of Contents
 --
@@ -39,10 +39,10 @@ Before browsing the website, notice:
 
 
 ## Available Pages
-* [Search page](https://rentaly.herokuapp.com) (explore listings)
-* [Listing’s page](https://rentaly.herokuapp.com/rooms/10)
-* Authenticated users’ [dashboard](https://rentaly.herokuapp.com/dashboard) to see their listings (if any)
-* Page for [adding new listings](https://rentaly.herokuapp.com/edit/new-listing)
+* [Search page](http://www.rentaly.co.uk) (explore listings)
+* [Listing’s page](http://www.rentaly.co.uk/rooms/10)
+* Authenticated users’ [dashboard](http://www.rentaly.co.uk/dashboard) to see their listings (if any)
+* Page for [adding new listings](http://www.rentaly.co.uk/edit/new-listing)
 
 
 
